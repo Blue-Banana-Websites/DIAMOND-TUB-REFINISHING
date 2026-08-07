@@ -1,0 +1,814 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Diamond Tub Refinishing | Bathtub, Shower &amp; Sink Refinishing in Calgary</title>
+<meta name="description" content="Professional bathtub, shower &amp; sink refinishing in Calgary. Skip the cost and mess of replacement — send 3 photos and get a fast, upfront quote from Diamond Tub Refinishing." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath fill='%230e3a3a' d='M24 4 40 20 24 44 8 20z'/%3E%3Cpath fill='%23aae0e0' d='M24 4 32 20 24 44 16 20z'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,600&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  /* ---------- Reset ---------- */
+  *, *::before, *::after { box-sizing: border-box; }
+  * { margin: 0; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  img, svg { display: block; max-width: 100%; }
+  a { color: inherit; text-decoration: none; }
+  ul { list-style: none; padding: 0; }
+  button, input, select, textarea { font: inherit; color: inherit; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  }
+
+  /* ---------- Tokens ---------- */
+  :root {
+    --teal: #aae0e0;
+    --teal-soft: #c9ecec;
+    --teal-deep: #0e3a3a;
+    --teal-deep-2: #123f3f;
+    --cream: #f5f6f2;
+    --heron: #f0f1ea;
+    --peach: #f8e4d1;
+    --peach-deep: #e8a765;
+    --slate: #465566;
+    --ink: #142623;
+    --ink-soft: #3d524e;
+    --white: #ffffff;
+
+    --font-display: "Fraunces", ui-serif, Georgia, serif;
+    --font-body: "Poppins", ui-sans-serif, system-ui, sans-serif;
+
+    --fs-h1: clamp(2.5rem, 1.55rem + 3.9vw, 4.85rem);
+    --fs-h2: clamp(1.9rem, 1.5rem + 1.7vw, 3.1rem);
+    --fs-h3: clamp(1.25rem, 1.12rem + 0.55vw, 1.65rem);
+    --fs-lead: clamp(1.1rem, 1.02rem + 0.4vw, 1.35rem);
+    --fs-body: clamp(1rem, 0.95rem + 0.2vw, 1.1rem);
+    --fs-small: clamp(0.82rem, 0.8rem + 0.1vw, 0.92rem);
+    --fs-eyebrow: clamp(0.76rem, 0.74rem + 0.08vw, 0.82rem);
+
+    --space-3xs: clamp(0.4rem, 0.35rem + 0.2vw, 0.6rem);
+    --space-2xs: clamp(0.65rem, 0.55rem + 0.4vw, 0.95rem);
+    --space-xs: clamp(0.9rem, 0.8rem + 0.5vw, 1.3rem);
+    --space-sm: clamp(1.3rem, 1.05rem + 1vw, 1.85rem);
+    --space-md: clamp(1.85rem, 1.4rem + 1.8vw, 2.9rem);
+    --space-lg: clamp(2.6rem, 1.8rem + 3.2vw, 4.75rem);
+    --space-xl: clamp(3.6rem, 2.3rem + 5.2vw, 7.5rem);
+
+    --radius-sm: 10px;
+    --radius-md: 18px;
+    --radius-lg: 30px;
+    --container: min(1240px, 92vw);
+    --shadow-card: 0 1.2rem 3rem -1.4rem rgba(14, 38, 35, 0.35);
+    --shadow-lift: 0 1.6rem 3.5rem -1.2rem rgba(14, 38, 35, 0.4);
+  }
+
+  /* ---------- Base ---------- */
+  body {
+    font-family: var(--font-body);
+    font-size: var(--fs-body);
+    color: var(--ink);
+    background: var(--cream);
+    line-height: 1.6;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    color: var(--teal-deep);
+    line-height: 1.08;
+    text-wrap: balance;
+    font-weight: 700;
+  }
+  h1 { font-size: var(--fs-h1); font-weight: 600; }
+  h2 { font-size: var(--fs-h2); font-weight: 600; }
+  h3 { font-size: var(--fs-h3); font-weight: 600; }
+  p { text-wrap: pretty; max-width: 62ch; }
+  em { font-style: italic; font-weight: 500; }
+  ::selection { background: var(--peach); color: var(--teal-deep); }
+  :focus-visible { outline: 2.5px solid var(--teal-deep); outline-offset: 3px; border-radius: 4px; }
+
+  .container { width: var(--container); margin-inline: auto; }
+  .eyebrow {
+    font-family: var(--font-body);
+    font-size: var(--fs-eyebrow);
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--peach-deep);
+    display: flex;
+    align-items: center;
+    gap: 0.6em;
+    margin-bottom: var(--space-xs);
+  }
+  .eyebrow::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--peach-deep);
+    flex: none;
+  }
+  .section { padding-block: var(--space-xl); }
+  .section--tight { padding-block: var(--space-lg); }
+  .section--heron { background: var(--heron); }
+  .section--peach { background: linear-gradient(180deg, var(--peach) 0%, var(--cream) 100%); }
+  .section-head { max-width: 46rem; margin-bottom: var(--space-lg); }
+  .section-head--center { margin-inline: auto; text-align: center; }
+  .section-head p { font-size: var(--fs-lead); color: var(--ink-soft); }
+  .section-head--center p { margin-inline: auto; }
+
+  [data-reveal] { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  [data-reveal].is-visible { opacity: 1; transform: translateY(0); }
+
+  /* ---------- Buttons ---------- */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6em;
+    padding: 1rem 1.9rem;
+    border-radius: 999px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.98rem;
+    letter-spacing: 0.02em;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .btn-ghost {
+    background: transparent;
+    color: var(--teal-deep);
+    border: 1.5px solid rgba(14, 58, 58, 0.3);
+    transition: border-color 0.25s ease, background 0.25s ease;
+  }
+  .btn-ghost:hover { border-color: var(--teal-deep); background: rgba(14, 58, 58, 0.05); }
+
+  .btn-primary {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.05rem 2.1rem;
+    background: var(--teal-deep);
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 0.92rem;
+    letter-spacing: 0.04em;
+    color: var(--cream);
+    border: 2px solid var(--teal-deep);
+    border-radius: 10px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    box-shadow: 0 0.9rem 1.8rem -1rem rgba(14, 38, 35, 0.45);
+    transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .btn-primary:hover, .btn-primary:focus-visible {
+    background: var(--peach-deep);
+    border-color: var(--peach-deep);
+    color: var(--teal-deep);
+    transform: translateY(-3px);
+    box-shadow: 0 1.2rem 2.2rem -1rem rgba(14, 38, 35, 0.4);
+  }
+  .btn-primary:active { transform: translateY(-1px); }
+  .btn-primary--onDark { background: var(--cream); border-color: var(--cream); color: var(--teal-deep); }
+  .btn-primary--onDark:hover, .btn-primary--onDark:focus-visible { background: var(--peach-deep); border-color: var(--peach-deep); color: var(--teal-deep); }
+
+  .btn-header { padding: 0.75rem 1.5rem; font-size: 0.82rem; }
+
+  /* ---------- Icon sprite ---------- */
+  .icon { width: 28px; height: 28px; stroke: currentColor; fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+
+  /* ---------- Header ---------- */
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(245, 246, 242, 0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(14, 58, 58, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  .site-header.is-scrolled { box-shadow: 0 8px 24px -14px rgba(14, 38, 35, 0.35); }
+  .header-inner {
+    width: var(--container);
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+    padding-block: 0.9rem;
+  }
+  .brand { display: flex; align-items: center; gap: 0.6rem; font-family: var(--font-display); font-weight: 700; font-size: clamp(1.05rem, 1rem + 0.4vw, 1.35rem); color: var(--teal-deep); }
+  .brand .icon { width: 30px; height: 30px; }
+  .brand span em { color: var(--peach-deep); font-style: normal; }
+
+  .nav { display: flex; align-items: center; gap: clamp(1.2rem, 1rem + 1vw, 2.4rem); }
+  .nav a { font-weight: 500; font-size: 0.95rem; color: var(--ink); position: relative; padding-block: 0.3rem; }
+  .nav a::after { content: ""; position: absolute; left: 0; right: 100%; bottom: 0; height: 2px; background: var(--peach-deep); transition: right 0.25s ease; }
+  .nav a:hover::after, .nav a:focus-visible::after { right: 0; }
+
+  .header-actions { display: flex; align-items: center; gap: clamp(1rem, 0.8rem + 1vw, 1.8rem); }
+  .header-phone { display: flex; align-items: center; gap: 0.5rem; font-weight: 600; font-size: 0.92rem; color: var(--teal-deep); white-space: nowrap; }
+  .header-phone .icon { width: 18px; height: 18px; }
+
+  .nav-toggle { display: none; }
+  .nav-toggle-label { display: none; }
+
+  @media (max-width: 860px) {
+    .header-phone { display: none; }
+    .nav-toggle-label {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 30px;
+      height: 24px;
+      cursor: pointer;
+      z-index: 20;
+    }
+    .nav-toggle-label span, .nav-toggle-label::before, .nav-toggle-label::after {
+      content: ""; display: block; height: 2.5px; border-radius: 2px; background: var(--teal-deep); transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    .nav {
+      position: fixed;
+      inset: 0 0 0 30%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: var(--space-md);
+      background: var(--cream);
+      padding: var(--space-lg);
+      transform: translateX(100%);
+      transition: transform 0.35s ease;
+      box-shadow: -20px 0 50px -20px rgba(14,38,35,0.3);
+    }
+    .nav a { font-size: 1.4rem; font-family: var(--font-display); }
+    .nav-toggle:checked ~ .nav { transform: translateX(0); }
+    .nav-toggle:checked ~ .nav-toggle-label::before { transform: translateY(7.5px) rotate(45deg); }
+    .nav-toggle:checked ~ .nav-toggle-label span { opacity: 0; }
+    .nav-toggle:checked ~ .nav-toggle-label::after { transform: translateY(-7.5px) rotate(-45deg); }
+  }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: var(--teal-deep);
+  }
+  .hero-media { position: absolute; inset: 0; }
+  .hero-media img { width: 100%; height: 100%; object-fit: cover; object-position: center 65%; }
+  .hero-media::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: linear-gradient(105deg, rgba(14,38,35,0.88) 0%, rgba(14,58,58,0.68) 38%, rgba(170,224,224,0.32) 68%, rgba(170,224,224,0.08) 100%);
+  }
+  .hero-inner {
+    position: relative;
+    z-index: 1;
+    width: var(--container);
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 1.15fr 0.95fr;
+    gap: clamp(2rem, 4vw, 4rem);
+    align-items: center;
+  }
+  .hero-copy h1 { color: var(--cream); margin-bottom: var(--space-sm); }
+  .hero-copy h1 em { font-family: var(--font-display); font-style: italic; font-weight: 500; color: var(--peach); }
+  .hero-copy p { font-size: var(--fs-lead); color: rgba(245,246,242,0.9); max-width: 34rem; }
+
+  .quote-card {
+    background: rgba(245, 246, 242, 0.97);
+    backdrop-filter: blur(6px);
+    border-radius: var(--radius-lg);
+    padding: clamp(1.6rem, 1.3rem + 1.5vw, 2.5rem);
+    box-shadow: var(--shadow-lift);
+    border: 1px solid rgba(255,255,255,0.5);
+  }
+  .quote-card .eyebrow { margin-bottom: var(--space-3xs); }
+  .quote-card h3 { margin-bottom: var(--space-2xs); }
+  .quote-card p { color: var(--ink-soft); font-size: 0.98rem; margin-bottom: var(--space-2xs); }
+  .quote-card .fine { font-size: var(--fs-small); color: var(--ink-soft); opacity: 0.85; }
+  .quote-card .btn-primary { width: 100%; margin-block: var(--space-sm) var(--space-md); font-size: 0.86rem; }
+
+  .trust-row { display: flex; flex-wrap: wrap; gap: 0.5rem 1.2rem; }
+  .trust-row li { display: flex; align-items: center; gap: 0.45rem; font-size: var(--fs-small); font-weight: 600; color: var(--teal-deep); }
+  .trust-row .icon { width: 16px; height: 16px; stroke: var(--peach-deep); stroke-width: 3; }
+
+  @media (max-width: 900px) {
+    .hero { aspect-ratio: auto; min-height: unset; padding-block: var(--space-lg); }
+    .hero-inner { grid-template-columns: 1fr; }
+  }
+
+  /* ---------- Trust strip ---------- */
+  .strip {
+    background: var(--teal-deep);
+    padding-block: var(--space-md);
+  }
+  .strip ul {
+    width: var(--container);
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-sm);
+  }
+  .strip li { display: flex; align-items: center; gap: 0.85rem; color: var(--cream); }
+  .strip .icon { color: var(--peach); width: 30px; height: 30px; }
+  .strip strong { display: block; font-family: var(--font-display); font-size: 1.05rem; font-weight: 600; }
+  .strip span { font-size: var(--fs-small); color: rgba(245,246,242,0.75); }
+  @media (max-width: 720px) {
+    .strip ul { grid-template-columns: 1fr; gap: var(--space-xs); }
+  }
+
+  /* ---------- Services ---------- */
+  .card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-md); }
+  .service-card {
+    background: var(--white);
+    border-radius: var(--radius-md);
+    padding: clamp(1.6rem, 1.3rem + 1.2vw, 2.3rem);
+    box-shadow: var(--shadow-card);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lift); }
+  .service-card .icon-badge {
+    width: 60px; height: 60px; border-radius: 16px;
+    background: var(--teal);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--teal-deep);
+  }
+  .service-card .icon-badge .icon { width: 30px; height: 30px; }
+  .service-card p { color: var(--ink-soft); font-size: 0.96rem; }
+  .service-card .card-link { margin-top: auto; font-weight: 700; font-size: 0.9rem; color: var(--teal-deep); display: inline-flex; align-items: center; gap: 0.4rem; }
+  .service-card .card-link .icon { width: 15px; height: 15px; stroke-width: 3; transition: transform 0.25s ease; }
+  .service-card .card-link:hover .icon { transform: translateX(4px); }
+  @media (max-width: 900px) { .card-grid { grid-template-columns: 1fr; } }
+
+  /* ---------- Why grid ---------- */
+  .why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-md) var(--space-lg); }
+  .why-item { display: flex; gap: var(--space-sm); }
+  .why-item .icon-badge {
+    width: 52px; height: 52px; border-radius: 14px; flex: none;
+    background: var(--peach);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--teal-deep);
+  }
+  .why-item .icon-badge .icon { width: 26px; height: 26px; }
+  .why-item h3 { font-size: 1.15rem; margin-bottom: 0.4rem; }
+  .why-item p { color: var(--ink-soft); font-size: 0.96rem; }
+  @media (max-width: 720px) { .why-grid { grid-template-columns: 1fr; } }
+
+  /* ---------- Process ---------- */
+  .process-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-md); counter-reset: step; position: relative; }
+  .process-list::before {
+    content: "";
+    position: absolute; top: 34px; left: 12%; right: 12%; height: 1.5px;
+    background: repeating-linear-gradient(90deg, rgba(14,58,58,0.28) 0 10px, transparent 10px 20px);
+  }
+  .process-step { position: relative; display: flex; flex-direction: column; gap: var(--space-2xs); }
+  .process-num {
+    width: 68px; height: 68px; border-radius: 50%;
+    background: var(--white); border: 2.5px solid var(--teal-deep);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--teal-deep);
+    position: relative; z-index: 1;
+  }
+  .process-step p { color: var(--ink-soft); font-size: 0.96rem; }
+  @media (max-width: 900px) {
+    .process-list { grid-template-columns: 1fr; }
+    .process-list::before { display: none; }
+  }
+
+  /* ---------- About ---------- */
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-lg); align-items: center; }
+  .about-media { position: relative; border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 4/5; box-shadow: var(--shadow-lift); }
+  .about-media img { width: 100%; height: 100%; object-fit: cover; }
+  .about-media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(14,58,58,0.5), transparent 40%); }
+  .about-copy p { color: var(--ink-soft); margin-bottom: var(--space-sm); }
+  .about-copy p:last-of-type { margin-bottom: var(--space-md); }
+  @media (max-width: 900px) {
+    .about-grid { grid-template-columns: 1fr; }
+    .about-media { order: -1; aspect-ratio: 16/10; }
+  }
+
+  /* ---------- CTA banner ---------- */
+  .cta-banner { background: var(--teal-deep); color: var(--cream); text-align: center; padding-block: var(--space-lg); }
+  .cta-banner h2 { color: var(--cream); margin-bottom: var(--space-xs); }
+  .cta-banner p { color: rgba(245,246,242,0.82); margin-inline: auto; margin-bottom: var(--space-md); font-size: var(--fs-lead); }
+
+  /* ---------- Contact ---------- */
+  .contact-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: var(--space-lg); }
+  .contact-info { display: flex; flex-direction: column; gap: var(--space-md); }
+  .contact-info p { color: var(--ink-soft); }
+  .info-line { display: flex; align-items: center; gap: 0.85rem; font-weight: 600; font-size: 1.05rem; color: var(--teal-deep); }
+  .info-line .icon-badge { width: 44px; height: 44px; border-radius: 12px; background: var(--teal); display: flex; align-items: center; justify-content: center; color: var(--teal-deep); flex: none; }
+  .info-line .icon-badge .icon { width: 22px; height: 22px; }
+  .photo-cta { background: var(--peach); border-radius: var(--radius-md); padding: var(--space-md); }
+  .photo-cta h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+  .photo-cta p { font-size: 0.92rem; color: var(--ink-soft); margin-bottom: var(--space-sm); }
+
+  .form-card { background: var(--white); border-radius: var(--radius-lg); padding: clamp(1.6rem, 1.3rem + 1.5vw, 2.6rem); box-shadow: var(--shadow-card); }
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-sm); }
+  .field { display: flex; flex-direction: column; gap: 0.45rem; margin-bottom: var(--space-sm); }
+  .field.full { grid-column: 1 / -1; }
+  .field label { font-size: 0.85rem; font-weight: 600; color: var(--teal-deep); }
+  .field input, .field select, .field textarea {
+    border: 1.5px solid rgba(14,58,58,0.18);
+    border-radius: var(--radius-sm);
+    padding: 0.8rem 1rem;
+    background: var(--cream);
+    font-size: 0.96rem;
+    transition: border-color 0.2s ease, background 0.2s ease;
+  }
+  .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--teal-deep); background: var(--white); outline: none; }
+  .field textarea { resize: vertical; min-height: 90px; }
+  @media (max-width: 620px) { .form-grid { grid-template-columns: 1fr; } .field.full { grid-column: auto; } }
+  @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } }
+
+  /* ---------- Footer ---------- */
+  .site-footer { background: var(--slate); color: var(--heron); padding-block: var(--space-lg) var(--space-md); }
+  .footer-grid { display: grid; grid-template-columns: 1.3fr 0.8fr 1fr; gap: var(--space-lg); margin-bottom: var(--space-lg); }
+  .footer-brand .brand { color: var(--cream); }
+  .footer-brand .brand .icon path:first-child { fill: var(--peach); }
+  .footer-brand p { color: rgba(240,241,234,0.72); margin-top: var(--space-xs); font-size: 0.92rem; }
+  .site-footer h4 { color: var(--cream); font-family: var(--font-body); font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: var(--space-sm); }
+  .site-footer ul { display: flex; flex-direction: column; gap: 0.65rem; }
+  .site-footer a, .site-footer li { color: rgba(240,241,234,0.82); font-size: 0.95rem; }
+  .site-footer a:hover { color: var(--peach); }
+  .footer-bottom { border-top: 1px solid rgba(240,241,234,0.15); padding-top: var(--space-sm); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; font-size: 0.82rem; color: rgba(240,241,234,0.6); }
+  @media (max-width: 780px) { .footer-grid { grid-template-columns: 1fr 1fr; } .footer-brand { grid-column: 1 / -1; } }
+</style>
+</head>
+<body>
+
+<!-- Icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="icon-diamond" viewBox="0 0 48 48"><path d="M24 4 40 20 24 44 8 20z" fill="#0e3a3a" stroke="none"/><path d="M8 20h32M17 20 24 4M31 20 24 4M17 20 24 44M31 20 24 44" stroke="#f5f6f2" stroke-width="1.4"/></symbol>
+    <symbol id="icon-bathtub" viewBox="0 0 48 48"><rect x="6" y="21" width="36" height="13" rx="6.5"/><line x1="4" y1="34" x2="44" y2="34"/><path d="M10 21v-4a4 4 0 0 1 4-4"/><path d="M34 9v6"/><path d="M30 9h4"/></symbol>
+    <symbol id="icon-shower" viewBox="0 0 48 48"><path d="M10 22a14 10 0 0 1 28 0"/><line x1="10" y1="22" x2="38" y2="22"/><line x1="15" y1="29" x2="15" y2="33"/><line x1="22" y1="29" x2="22" y2="35"/><line x1="29" y1="29" x2="29" y2="33"/><line x1="36" y1="29" x2="36" y2="35"/></symbol>
+    <symbol id="icon-sink" viewBox="0 0 48 48"><path d="M6 22h36"/><path d="M11 22v6a11 6.5 0 0 0 22 0v-6"/><path d="M30 22v-6a4 4 0 0 1 4-4"/><path d="M34 9v3"/><circle cx="22" cy="28" r="1.3" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="icon-camera" viewBox="0 0 48 48"><rect x="5" y="14" width="38" height="24" rx="4"/><circle cx="24" cy="26" r="8"/><path d="M17 14l2.5-4h9L31 14"/></symbol>
+    <symbol id="icon-price" viewBox="0 0 48 48"><path d="M6 24 22 8h16v16L22 40z"/><circle cx="30" cy="14" r="2" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="icon-calendar" viewBox="0 0 48 48"><rect x="6" y="10" width="36" height="32" rx="4"/><line x1="6" y1="20" x2="42" y2="20"/><line x1="15" y1="6" x2="15" y2="14"/><line x1="33" y1="6" x2="33" y2="14"/><path d="M17 29l5 5 9-9"/></symbol>
+    <symbol id="icon-shield" viewBox="0 0 48 48"><path d="M24 4 40 10v12c0 12-8 18-16 22-8-4-16-10-16-22V10z"/><path d="M17 23l5 5 9-9"/></symbol>
+    <symbol id="icon-pin" viewBox="0 0 48 48"><path d="M24 44s14-15 14-25a14 14 0 0 0-28 0c0 10 14 25 14 25z"/><circle cx="24" cy="19" r="5"/></symbol>
+    <symbol id="icon-nomess" viewBox="0 0 48 48"><rect x="8" y="8" width="32" height="32" rx="6"/><path d="M17 17l14 14M31 17l-14 14"/></symbol>
+    <symbol id="icon-swap" viewBox="0 0 48 48"><path d="M8 16h26l-6-6"/><path d="M40 32H14l6 6"/></symbol>
+    <symbol id="icon-check" viewBox="0 0 48 48"><path d="M8 24l10 10 22-22"/></symbol>
+    <symbol id="icon-mail" viewBox="0 0 48 48"><rect x="5" y="11" width="38" height="26" rx="4"/><path d="M6 13l18 15 18-15"/></symbol>
+    <symbol id="icon-phone" viewBox="0 0 48 48"><path d="M14 6c2 0 6 1 6 4 0 3-3 4-3 6s5 9 9 9 3-3 6-3c3 0 4 4 4 6 0 4-3 6-6 6-10 0-22-12-22-22 0-3 2-6 6-6z"/></symbol>
+    <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 5l7 7-7 7"/></symbol>
+  </defs>
+</svg>
+
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a href="#home" class="brand">
+      <svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><use href="#icon-diamond"></use></svg>
+      <span>Diamond Tub <em>Refinishing</em></span>
+    </a>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <nav class="nav" id="site-nav">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">About Us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="tel:14035107859" class="header-phone">
+        <svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><use href="#icon-phone"></use></svg>
+        (403) 510-7859
+      </a>
+      <a href="#contact" class="btn-primary btn-header">
+        <span>Get My Photo Quote</span>
+      </a>
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation"><span></span></label>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-media">
+      <img src="i/hero-1920-1080.webp" alt="Refinished white bathtub in a bright bay-window bathroom" />
+    </div>
+    <div class="hero-inner container">
+      <div class="hero-copy">
+        <h1>Make Your Old Tub Look <em>New Again.</em></h1>
+        <p>Professional bathtub, shower &amp; sink refinishing in Calgary — without the cost and mess of replacement.</p>
+      </div>
+
+      <div class="quote-card">
+        <p class="eyebrow">Get a Fast Photo Quote</p>
+        <h3>Send us 3 photos. We'll send you a straightforward price.</h3>
+        <p class="fine">No home visit. No sales pitch. No obligation.</p>
+
+        <a href="#contact" class="btn-primary">
+          <span>Get My Photo Quote</span>
+        </a>
+
+        <ul class="trust-row">
+          <li><svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><use href="#icon-check"></use></svg> Written Warranty</li>
+          <li><svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><use href="#icon-check"></use></svg> Upfront Pricing</li>
+          <li><svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><use href="#icon-check"></use></svg> Calgary Owned</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST STRIP -->
+  <section class="strip">
+    <ul>
+      <li>
+        <svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><use href="#icon-shield"></use></svg>
+        <span><strong>Written Warranty</strong><span>Every job, guaranteed in writing</span></span>
+      </li>
+      <li>
+        <svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><use href="#icon-price"></use></svg>
+        <span><strong>Upfront Pricing</strong><span>One clear number, no surprises</span></span>
+      </li>
+      <li>
+        <svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><use href="#icon-pin"></use></svg>
+        <span><strong>Calgary Owned</strong><span>Local crew, local accountability</span></span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">Services</p>
+        <h2>One finish, three fixtures.</h2>
+        <p>The same durable, like-new refinish — sized to whatever's tired, chipped, or dated in your bathroom.</p>
+      </div>
+
+      <div class="card-grid">
+        <article class="service-card" data-reveal>
+          <div class="icon-badge"><svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><use href="#icon-bathtub"></use></svg></div>
+          <h3>Bathtub Refinishing</h3>
+          <p>Chips, stains, and dated colors resurfaced into a smooth, durable finish — in a single visit, without tearing out the tub.</p>
+          <a href="#contact" class="card-link">Get a quote <svg class="icon" viewBox="0 0 24 24" style="width:15px;height:15px" aria-hidden="true"><use href="#icon-arrow"></use></svg></a>
+        </article>
+
+        <article class="service-card" data-reveal>
+          <div class="icon-badge"><svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><use href="#icon-shower"></use></svg></div>
+          <h3>Shower Refinishing</h3>
+          <p>Worn shower pans, walls, and enclosures brought back to a clean, non-slip, watertight finish that holds up to daily use.</p>
+          <a href="#contact" class="card-link">Get a quote <svg class="icon" viewBox="0 0 24 24" style="width:15px;height:15px" aria-hidden="true"><use href="#icon-arrow"></use></svg></a>
+        </article>
+
+        <article class="service-card" data-reveal>
+          <div class="icon-badge"><svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><use href="#icon-sink"></use></svg></div>
+          <h3>Sink Refinishing</h3>
+          <p>Bathroom and kitchen sinks refinished to match — a fast, affordable way to update a fixture without replacing the counter.</p>
+          <a href="#contact" class="card-link">Get a quote <svg class="icon" viewBox="0 0 24 24" style="width:15px;height:15px" aria-hidden="true"><use href="#icon-arrow"></use></svg></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section class="section section--heron">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">Why Diamond Tub</p>
+        <h2>Easier than replacement, in every way that matters.</h2>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-item" data-reveal>
+          <div class="icon-badge"><svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><use href="#icon-swap"></use></svg></div>
+          <div>
+            <h3>Skip the Replacement Cost</h3>
+            <p>Refinishing runs a fraction of ripping out and replacing a tub, shower, or sink — same durable, like-new result.</p>
+          </div>
+        </div>
+        <div class="why-item" data-reveal>
+          <div class="icon-badge"><svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><use href="#icon-nomess"></use></svg></div>
+          <div>
+            <h3>Zero Mess, Zero Demo</h3>
+            <p>No demolition, no dust, no days without a bathroom. Most refinishes are completed start-to-finish in one visit.</p>
+          </div>
+        </div>
+        <div class="why-item" data-reveal>
+          <div class="icon-badge"><svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><use href="#icon-shield"></use></svg></div>
+          <div>
+            <h3>Written Warranty</h3>
+            <p>Every job is backed by a written warranty before we start — not just a verbal promise on the way out the door.</p>
+          </div>
+        </div>
+        <div class="why-item" data-reveal>
+          <div class="icon-badge"><svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><use href="#icon-pin"></use></svg></div>
+          <div>
+            <h3>Calgary Owned &amp; Operated</h3>
+            <p>A local team, not a franchise call centre. We show up, do the work, and stand behind it after we're gone.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section" id="how-it-works">
+    <div class="container">
+      <div class="section-head section-head--center" data-reveal>
+        <p class="eyebrow" style="justify-content:center">How It Works</p>
+        <h2>From photos to finished in three steps.</h2>
+      </div>
+
+      <div class="process-list">
+        <div class="process-step" data-reveal>
+          <div class="process-num">1</div>
+          <svg class="icon" viewBox="0 0 48 48" aria-hidden="true" style="color:var(--teal-deep)"><use href="#icon-camera"></use></svg>
+          <h3>Send 3 Photos</h3>
+          <p>Snap your tub, shower, or sink from a few angles and text or email them our way.</p>
+        </div>
+        <div class="process-step" data-reveal>
+          <div class="process-num">2</div>
+          <svg class="icon" viewBox="0 0 48 48" aria-hidden="true" style="color:var(--teal-deep)"><use href="#icon-price"></use></svg>
+          <h3>Get Your Price</h3>
+          <p>We review your photos and send back a clear, upfront quote — usually the same day.</p>
+        </div>
+        <div class="process-step" data-reveal>
+          <div class="process-num">3</div>
+          <svg class="icon" viewBox="0 0 48 48" aria-hidden="true" style="color:var(--teal-deep)"><use href="#icon-calendar"></use></svg>
+          <h3>Book Your Date</h3>
+          <p>Pick a time that works. Most jobs are refinished start-to-finish in a single visit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section section--peach" id="about">
+    <div class="container about-grid">
+      <div class="about-media" data-reveal>
+        <img src="i/hero-1920-1080.webp" alt="Freshly refinished bathtub finish, glossy and like new" />
+      </div>
+      <div class="about-copy" data-reveal>
+        <p class="eyebrow">About Us</p>
+        <h2>Calgary owned. Craft-focused.</h2>
+        <p>Diamond Tub Refinishing was built on a simple idea: a tired tub, shower, or sink shouldn't mean a demolition project. We're a Calgary-based refinishing crew that restores the fixtures you already have to a like-new finish — durable, hygienic, and ready for years more use.</p>
+        <p>No subcontractors, no surprise costs, no pressure. Just straightforward work from a team that lives and works in this city, and stands behind every job with a written warranty.</p>
+        <a href="#contact" class="btn-ghost btn">Get My Photo Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Still deciding?</h2>
+      <p>Send 3 photos — get a straightforward price back in one message.</p>
+      <a href="#contact" class="btn-primary btn-primary--onDark">
+        <span>Get My Photo Quote</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">Contact</p>
+        <h2>Get your fast photo quote.</h2>
+        <p>Send 3 photos of your tub, shower, or sink and we'll get back to you with straightforward pricing — usually the same day.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info" data-reveal>
+          <a href="tel:14035107859" class="info-line">
+            <span class="icon-badge"><svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><use href="#icon-phone"></use></svg></span>
+            (403) 510-7859
+          </a>
+          <a href="mailto:contact@diamondtubrefinishing.ca" class="info-line">
+            <span class="icon-badge"><svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><use href="#icon-mail"></use></svg></span>
+            contact@diamondtubrefinishing.ca
+          </a>
+          <div class="info-line">
+            <span class="icon-badge"><svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><use href="#icon-pin"></use></svg></span>
+            Proudly serving Calgary &amp; area
+          </div>
+
+          <div class="photo-cta">
+            <h3>Prefer to email your photos?</h3>
+            <p>Attach your 3 photos directly and we'll reply with your quote — no form required.</p>
+            <a href="mailto:contact@diamondtubrefinishing.ca?subject=Photo%20Quote%20Request&body=Hi%20Diamond%20Tub%2C%20I've%20attached%203%20photos%20of%20my%20tub%2Fshower%2Fsink%20for%20a%20quote." class="btn btn-ghost" style="background:var(--white)">Email Us Your Photos</a>
+          </div>
+        </div>
+
+        <form class="form-card" action="mailto:contact@diamondtubrefinishing.ca" method="post" enctype="text/plain" data-reveal>
+          <div class="form-grid">
+            <div class="field">
+              <label for="name">Full name</label>
+              <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+            </div>
+            <div class="field">
+              <label for="phone">Phone number</label>
+              <input type="tel" id="phone" name="phone" placeholder="(403) 510-7859" required />
+            </div>
+            <div class="field full">
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="email" placeholder="jane@email.com" required />
+            </div>
+            <div class="field full">
+              <label for="service">What needs refinishing?</label>
+              <select id="service" name="service">
+                <option>Bathtub</option>
+                <option>Shower</option>
+                <option>Sink</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label for="notes">Anything we should know?</label>
+              <textarea id="notes" name="notes" placeholder="Tell us about the chips, stains, or color you're hoping for."></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-ghost" style="width:100%; background:var(--teal-deep); color:var(--cream); border-color:var(--teal-deep)">Send My Info</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="brand">
+          <svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><use href="#icon-diamond"></use></svg>
+          <span>Diamond Tub Refinishing</span>
+        </a>
+        <p>Bathtub, shower &amp; sink refinishing for Calgary homes — a fast photo quote away from looking new again.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get In Touch</h4>
+        <ul>
+          <li><a href="tel:14035107859">(403) 510-7859</a></li>
+          <li><a href="mailto:contact@diamondtubrefinishing.ca">contact@diamondtubrefinishing.ca</a></li>
+          <li>Calgary, Alberta</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Diamond Tub Refinishing. All rights reserved.</span>
+      <span>Calgary, Alberta</span>
+      <span>Website by Blue Banana Websites</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var header = document.getElementById('site-header');
+  window.addEventListener('scroll', function () {
+    header.classList.toggle('is-scrolled', window.scrollY > 8);
+  }, { passive: true });
+
+  var navToggle = document.getElementById('nav-toggle');
+  var navLinks = document.querySelectorAll('#site-nav a');
+  navLinks.forEach(function (link) {
+    link.addEventListener('click', function () { navToggle.checked = false; });
+  });
+
+  if ('IntersectionObserver' in window) {
+    var revealEls = document.querySelectorAll('[data-reveal]');
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+    revealEls.forEach(function (el) { io.observe(el); });
+  } else {
+    document.querySelectorAll('[data-reveal]').forEach(function (el) { el.classList.add('is-visible'); });
+  }
+</script>
+
+</body>
+</html>

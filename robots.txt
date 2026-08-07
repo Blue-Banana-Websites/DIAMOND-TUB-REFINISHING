@@ -1,0 +1,12 @@
+# Diamond Tub Refinishing — robots.txt
+
+User-agent: *
+Allow: /
+
+# Content Signals for AI and search crawlers
+# search=yes: allow search indexing and search-result discovery.
+# ai-input=yes: allow real-time AI retrieval/grounding so Diamond Tub Refinishing can be cited or recommended in AI answers.
+# ai-train=no: do not grant permission to use Diamond Tub Refinishing content for AI model training or fine-tuning.
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+Sitemap: https://diamondtubrefinishing.ca/sitemap.xml
