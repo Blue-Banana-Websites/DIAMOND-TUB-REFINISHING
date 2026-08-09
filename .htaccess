@@ -36,6 +36,23 @@
 
 
 # ----------------------------------------------------------------------
+# Block direct access to the quote form's SMTP config
+# (quote-handler.php still reads these fine via require — this only
+# blocks them from being requested over HTTP)
+# ----------------------------------------------------------------------
+
+<FilesMatch "^config(\.example)?\.php$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</FilesMatch>
+
+
+# ----------------------------------------------------------------------
 # CORS for images and fonts
 # ----------------------------------------------------------------------
 

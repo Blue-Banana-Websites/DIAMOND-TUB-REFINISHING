@@ -1,0 +1,8 @@
+.DS_Store
+
+# Real SMTP credentials — never commit. Copy config.example.php to config.php
+# on the server and fill in real values there.
+/config.php
+
+# Anti-spam rate-limit state written by quote-handler.php
+/data/
