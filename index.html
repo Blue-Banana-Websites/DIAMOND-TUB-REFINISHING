@@ -9,7 +9,7 @@
     </title>
     <meta
       name="description"
-      content="Professional bathtub, shower &amp; sink refinishing in Calgary. Skip the cost and mess of replacement — send 3 photos and get a fast, upfront quote from Diamond Tub Refinishing."
+      content="Professional bathtub, shower &amp; sink refinishing in Calgary. Skip the cost and mess of replacement — send photos and get a fast, upfront quote from Diamond Tub Refinishing."
     />
     <link rel="canonical" href="https://diamondtubrefinishing.ca/" />
     <script type="application/ld+json">
@@ -20,7 +20,7 @@
         "name": "Diamond Tub Refinishing",
         "url": "https://diamondtubrefinishing.ca/",
         "image": "https://diamondtubrefinishing.ca/i/hero-1920-1080.webp",
-        "description": "Professional bathtub, shower & sink refinishing in Calgary. Skip the cost and mess of replacement — send 3 photos and get a fast, upfront quote from Diamond Tub Refinishing.",
+        "description": "Professional bathtub, shower & sink refinishing in Calgary. Skip the cost and mess of replacement — send photos and get a fast, upfront quote from Diamond Tub Refinishing.",
         "telephone": "+14035107859",
         "email": "contact@diamondtubrefinishing.ca",
         "address": {
@@ -388,25 +388,60 @@
 
       /* ---------- Header ---------- */
       .site-header {
-        position: sticky;
+        position: fixed;
         top: 0;
-        z-index: 100;
-        background: rgba(245, 246, 242, 0.92);
-        backdrop-filter: blur(10px);
-        border-bottom: 1px solid rgba(33, 41, 48, 0.1);
-        transition: box-shadow 0.3s ease;
+        left: 0;
+        width: 100%;
+        z-index: 1001;
+        pointer-events: none;
       }
-      .site-header.is-scrolled {
-        box-shadow: 0 8px 24px -14px rgba(33, 41, 48, 0.35);
+      .nav-pill {
+        position: relative;
+        pointer-events: all;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        background-color: transparent;
+        border: 1px solid transparent;
+        border-radius: 0;
+        box-shadow: none;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        transition:
+          width 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+          max-width 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+          background-color 0.35s ease,
+          border-color 0.35s ease,
+          border-radius 0.35s ease,
+          box-shadow 0.35s ease,
+          backdrop-filter 0.35s ease;
+      }
+      .nav-pill.scrolled {
+        width: calc(100% - 48px);
+        max-width: 1140px;
+        background-color: rgba(245, 246, 242, 0.92);
+        backdrop-filter: blur(14px) saturate(160%);
+        -webkit-backdrop-filter: blur(14px) saturate(160%);
+        border: 1px solid rgba(33, 41, 48, 0.08);
+        border-top: none;
+        border-radius: 0 0 18px 18px;
+        box-shadow:
+          0 8px 32px rgba(33, 41, 48, 0.18),
+          0 2px 8px rgba(33, 41, 48, 0.12);
       }
       .header-inner {
-        width: var(--container);
+        width: 100%;
         margin-inline: auto;
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: var(--space-md);
         padding-block: 0.9rem;
+        padding-inline: clamp(20px, 3vw, 44px);
+        transition: padding-block 0.35s ease;
+      }
+      .nav-pill.scrolled .header-inner {
+        padding-block: 0.55rem;
       }
       .brand {
         display: flex;
@@ -426,31 +461,115 @@
         font-style: normal;
       }
 
+      /* Desktop nav + mega dropdown */
       .nav {
         display: flex;
         align-items: center;
-        gap: clamp(1.2rem, 1rem + 1vw, 2.4rem);
       }
-      .nav a {
+      .nav-menu {
+        display: flex;
+        align-items: center;
+        gap: clamp(1.1rem, 0.9rem + 1vw, 2rem);
+      }
+      .nav-link {
+        display: flex;
+        align-items: center;
+        gap: 5px;
         font-weight: 500;
         font-size: 0.95rem;
         color: var(--ink);
         position: relative;
-        padding-block: 0.3rem;
+        padding-block: 1.5rem;
+        cursor: pointer;
       }
-      .nav a::after {
+      .nav-link::after {
         content: "";
         position: absolute;
         left: 0;
         right: 100%;
-        bottom: 0;
+        bottom: 1.1rem;
         height: 2px;
         background: var(--peach-deep);
         transition: right 0.25s ease;
       }
-      .nav a:hover::after,
-      .nav a:focus-visible::after {
+      .nav-link:hover::after,
+      .nav-link:focus-visible::after {
         right: 0;
+      }
+      .nav-link .chevron {
+        font-size: 10px;
+        opacity: 0.6;
+        transition: transform 0.2s ease;
+      }
+      .nav-item:hover .nav-link .chevron {
+        transform: rotate(180deg);
+      }
+
+      .nav-dropdown {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%) translateY(6px);
+        background: var(--white);
+        border: 1px solid rgba(33, 41, 48, 0.08);
+        border-radius: var(--radius-md);
+        padding: 1.8rem;
+        width: max-content;
+        box-shadow: var(--shadow-lift);
+        opacity: 0;
+        visibility: hidden;
+        transition:
+          opacity 0.2s ease,
+          transform 0.2s ease,
+          visibility 0.2s ease;
+        display: flex;
+        gap: 2.2rem;
+        z-index: 50;
+      }
+      .nav-item:hover .nav-dropdown,
+      .nav-item:focus-within .nav-dropdown {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) translateY(0);
+      }
+      .nav-dropdown-col {
+        display: flex;
+        flex-direction: column;
+        width: max-content;
+        min-width: 190px;
+      }
+      .nav-dropdown-title {
+        font-family: var(--font-body);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--peach-deep);
+        margin-bottom: 1rem;
+      }
+      .nav-sub-link {
+        display: block;
+        padding: 0.6rem;
+        margin: 0 -0.6rem 0.2rem;
+        border-radius: 8px;
+        transition: background 0.2s ease;
+      }
+      .nav-sub-link:hover,
+      .nav-sub-link:focus-visible {
+        background: var(--heron);
+      }
+      .nav-sub-title {
+        display: block;
+        font-weight: 600;
+        font-size: 0.92rem;
+        color: var(--ink);
+        margin-bottom: 2px;
+      }
+      .nav-sub-desc {
+        display: block;
+        font-size: 0.8rem;
+        color: var(--ink-soft);
+        font-weight: 400;
       }
 
       .header-actions {
@@ -458,81 +577,133 @@
         align-items: center;
         gap: clamp(1rem, 0.8rem + 1vw, 1.8rem);
       }
-      .header-phone {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        font-weight: 600;
-        font-size: 0.92rem;
-        color: var(--ink);
-        white-space: nowrap;
+      /* Mobile hamburger toggle */
+      .mobile-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        z-index: 200;
+        border: none;
+        background: none;
+        padding: 4px;
       }
-      .header-phone .icon {
-        width: 18px;
-        height: 18px;
+      .mobile-toggle .bar {
+        width: 24px;
+        height: 2.5px;
+        border-radius: 2px;
+        background: var(--ink);
+        transition:
+          transform 0.3s ease,
+          opacity 0.3s ease;
+      }
+      .mobile-toggle.active .bar:nth-child(1) {
+        transform: translateY(7.5px) rotate(45deg);
+      }
+      .mobile-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+      }
+      .mobile-toggle.active .bar:nth-child(3) {
+        transform: translateY(-7.5px) rotate(-45deg);
       }
 
-      .nav-toggle {
-        display: none;
+      /* Mobile off-canvas drawer */
+      .mobile-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background: var(--cream);
+        padding: calc(var(--space-lg) + 20px) var(--space-md) var(--space-md);
+        transition: right 0.35s cubic-bezier(0.77, 0.2, 0.05, 1);
+        z-index: 1000;
+        overflow-y: auto;
       }
-      .nav-toggle-label {
+      .mobile-menu.active {
+        right: 0;
+      }
+      .mobile-item {
+        border-bottom: 1px solid rgba(33, 41, 48, 0.1);
+      }
+      a.mobile-header {
+        display: block;
+      }
+      .mobile-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.6rem;
+        padding: 1.1rem 0;
+        font-family: var(--font-display);
+        font-size: 1.15rem;
+        font-weight: 600;
+        color: var(--ink);
+        cursor: pointer;
+      }
+      .mobile-header.open {
+        color: var(--peach-deep);
+      }
+      .mobile-chevron {
+        font-size: 11px;
+        flex: none;
+        transition: transform 0.3s ease;
+      }
+      .mobile-header.open .mobile-chevron {
+        transform: rotate(180deg);
+        color: var(--peach-deep);
+      }
+      .mobile-sub {
         display: none;
+        padding: 0 0 1rem 0.5rem;
+      }
+      .mobile-sub.open {
+        display: block;
+      }
+      .mobile-link {
+        display: block;
+        padding: 0.55rem 0;
+        color: var(--ink-soft);
+        font-size: 0.95rem;
+      }
+      .mobile-link:hover {
+        color: var(--ink);
+      }
+      .mobile-actions {
+        margin-top: var(--space-md);
+        display: flex;
+        flex-direction: column;
+        gap: 0.9rem;
+      }
+      .mobile-actions .btn-primary {
+        text-align: center;
+      }
+      /* Homepage-only: header floats over the hero photo until scrolled,
+         so nav text starts light and switches to ink once the pill solidifies */
+      .brand,
+      .nav-link {
+        color: var(--cream);
+      }
+      .mobile-toggle .bar {
+        background: var(--cream);
+      }
+      .nav-pill.scrolled .brand,
+      .nav-pill.scrolled .nav-link {
+        color: var(--ink);
+      }
+      .nav-pill.scrolled .mobile-toggle .bar {
+        background: var(--ink);
       }
 
       @media (max-width: 860px) {
-        .header-phone {
+        .nav {
           display: none;
         }
-        .nav-toggle-label {
+        .header-actions .btn-header {
+          display: none;
+        }
+        .mobile-toggle {
           display: flex;
-          flex-direction: column;
-          justify-content: center;
-          gap: 5px;
-          width: 30px;
-          height: 24px;
-          cursor: pointer;
-          z-index: 20;
-        }
-        .nav-toggle-label span,
-        .nav-toggle-label::before,
-        .nav-toggle-label::after {
-          content: "";
-          display: block;
-          height: 2.5px;
-          border-radius: 2px;
-          background: var(--ink);
-          transition:
-            transform 0.3s ease,
-            opacity 0.3s ease;
-        }
-        .nav {
-          position: fixed;
-          inset: 0 0 0 30%;
-          flex-direction: column;
-          justify-content: center;
-          align-items: flex-start;
-          gap: var(--space-md);
-          background: var(--cream);
-          padding: var(--space-lg);
-          transform: translateX(100%);
-          transition: transform 0.35s ease;
-          box-shadow: -20px 0 50px -20px rgba(33, 41, 48, 0.3);
-        }
-        .nav a {
-          font-size: 1.4rem;
-          font-family: var(--font-display);
-        }
-        .nav-toggle:checked ~ .nav {
-          transform: translateX(0);
-        }
-        .nav-toggle:checked ~ .nav-toggle-label::before {
-          transform: translateY(7.5px) rotate(45deg);
-        }
-        .nav-toggle:checked ~ .nav-toggle-label span {
-          opacity: 0;
-        }
-        .nav-toggle:checked ~ .nav-toggle-label::after {
-          transform: translateY(-7.5px) rotate(-45deg);
         }
       }
 
@@ -541,6 +712,7 @@
         position: relative;
         aspect-ratio: 16 / 9;
         min-height: 520px;
+        padding-top: 130px;
         display: flex;
         align-items: center;
         overflow: hidden;
@@ -566,6 +738,17 @@
           rgba(33, 41, 48, 0.45) 32%,
           rgba(170, 224, 224, 0.35) 66%,
           rgba(170, 224, 224, 0.08) 100%
+        );
+      }
+      .hero-media::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background: linear-gradient(
+          to bottom,
+          rgba(20, 24, 28, 0.55) 0,
+          rgba(20, 24, 28, 0) 170px
         );
       }
       .hero-inner {
@@ -811,7 +994,8 @@
         .hero {
           aspect-ratio: auto;
           min-height: unset;
-          padding-block: var(--space-lg);
+          padding-top: calc(var(--space-lg) + 130px);
+          padding-bottom: var(--space-lg);
         }
         .hero-inner {
           grid-template-columns: 1fr;
@@ -915,6 +1099,11 @@
       }
       .service-card .card-link:hover .icon {
         transform: translateX(4px);
+      }
+      .service-card .card-sublink {
+        font-size: 0.85rem;
+        color: var(--ink-soft);
+        text-decoration: underline;
       }
       @media (max-width: 900px) {
         .card-grid {
@@ -1383,41 +1572,123 @@
     </svg>
 
     <header class="site-header" id="site-header">
+      <div class="nav-pill" id="navPill">
       <div class="header-inner">
         <a href="#home" class="brand">
-          <svg class="icon" viewBox="0 0 48 48" aria-hidden="true">
-            <use href="#icon-diamond"></use>
-          </svg>
           <span>Diamond Tub <em>Refinishing</em></span>
         </a>
 
-        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
         <nav class="nav" id="site-nav">
-          <a href="#home">Home</a>
-          <a href="#services">Services</a>
-          <a href="#about">About Us</a>
-          <a href="#contact">Contact</a>
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <span class="nav-link" tabindex="0"
+                >Refinishing &amp; Repairs
+                <span class="chevron" aria-hidden="true">&#x25BC;</span></span
+              >
+              <div class="nav-dropdown">
+                <div class="nav-dropdown-col">
+                  <div class="nav-dropdown-title">Tubs &amp; Showers</div>
+                  <a href="/bathtub-hot-tub-refinishing/" class="nav-sub-link">
+                    <span class="nav-sub-title">Bathtubs &amp; Hot Tubs</span>
+                    <span class="nav-sub-desc">Chip &amp; stain resurfacing</span>
+                  </a>
+                  <a href="/shower-refinishing/" class="nav-sub-link">
+                    <span class="nav-sub-title">Showers</span>
+                    <span class="nav-sub-desc">Pans, walls &amp; enclosures</span>
+                  </a>
+                </div>
+                <div class="nav-dropdown-col">
+                  <div class="nav-dropdown-title">Sinks &amp; Surfaces</div>
+                  <a href="/sink-vanity-refinishing/" class="nav-sub-link">
+                    <span class="nav-sub-title">Sinks &amp; Vanities</span>
+                    <span class="nav-sub-desc">Bathroom &amp; kitchen</span>
+                  </a>
+                  <a href="/cultured-marble-refinishing/" class="nav-sub-link">
+                    <span class="nav-sub-title">Cultured Marble</span>
+                    <span class="nav-sub-desc">Gel-coat &amp; crack repair</span>
+                  </a>
+                </div>
+                <div class="nav-dropdown-col">
+                  <div class="nav-dropdown-title">Specialty</div>
+                  <a href="/jetted-tub-conversion/" class="nav-sub-link">
+                    <span class="nav-sub-title">Jetted Tub Conversion</span>
+                    <span class="nav-sub-desc">Jet line service &amp; refinish</span>
+                  </a>
+                  <a href="/ceramic-tile-refinishing/" class="nav-sub-link">
+                    <span class="nav-sub-title">Ceramic Tile</span>
+                    <span class="nav-sub-desc">In-place tile reglazing</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a href="/commercial-services/" class="nav-link">Commercial</a>
+            </li>
+            <li class="nav-item">
+              <a href="/contact-us/" class="nav-link">Contact</a>
+            </li>
+          </ul>
         </nav>
 
         <div class="header-actions">
-          <a href="tel:14035107859" class="header-phone">
-            <svg class="icon" viewBox="0 0 48 48" aria-hidden="true">
-              <use href="#icon-phone"></use>
-            </svg>
-            (403) 510-7859
+          <a href="tel:14035107859" class="btn-primary btn-header">
+            <span>(403) 510-7859</span>
           </a>
-          <a href="#home" class="btn-primary btn-header">
-            <span>Get My Photo Quote</span>
-          </a>
-          <label
-            for="nav-toggle"
-            class="nav-toggle-label"
+          <button
+            type="button"
+            class="mobile-toggle"
+            id="mobileToggle"
             aria-label="Toggle navigation"
-            ><span></span
-          ></label>
+            aria-expanded="false"
+          >
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
         </div>
       </div>
+    </div>
     </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-item">
+        <div class="mobile-header" onclick="toggleAccordion(this)">
+          Refinishing &amp; Repairs
+          <span class="mobile-chevron" aria-hidden="true">&#x25BC;</span>
+        </div>
+        <div class="mobile-sub">
+          <a href="/bathtub-hot-tub-refinishing/" class="mobile-link"
+            >Bathtubs &amp; Hot Tubs</a
+          >
+          <a href="/shower-refinishing/" class="mobile-link">Showers</a>
+          <a href="/sink-vanity-refinishing/" class="mobile-link"
+            >Sinks &amp; Vanities</a
+          >
+          <a href="/cultured-marble-refinishing/" class="mobile-link"
+            >Cultured Marble</a
+          >
+          <a href="/jetted-tub-conversion/" class="mobile-link"
+            >Jetted Tub Conversion</a
+          >
+          <a href="/ceramic-tile-refinishing/" class="mobile-link"
+            >Ceramic Tile</a
+          >
+        </div>
+      </div>
+      <div class="mobile-item">
+        <a href="/commercial-services/" class="mobile-header">Commercial</a>
+      </div>
+      <div class="mobile-item">
+        <a href="/contact-us/" class="mobile-header">Contact</a>
+      </div>
+
+      <div class="mobile-actions">
+        <a href="tel:14035107859" class="btn-primary btn-header">
+          <span>(403) 510-7859</span>
+        </a>
+      </div>
+    </div>
 
     <main>
       <!-- HERO -->
@@ -1440,7 +1711,7 @@
           <div class="quote-card" id="quoteCard">
             <div class="quote-intro" id="quoteIntro">
               <p class="eyebrow">Get a Fast Photo Quote</p>
-              <h3>Send us 3 photos. We'll send you a straightforward price.</h3>
+              <h3>Send 1 to 3 photos. We'll send you a straightforward price.</h3>
               <p class="fine">No home visit. No sales pitch. No obligation.</p>
 
               <button type="button" class="btn-primary" id="quoteStartBtn">
@@ -1483,7 +1754,8 @@
                 <p class="eyebrow">Step 1 of 2</p>
                 <h3>Show us what needs refinishing.</h3>
                 <p class="fine">
-                  Add 3 photos — JPEG, PNG, WebP, or HEIC/HEIF.
+                  Add at least 1 photo (up to 3) — JPEG, PNG, WebP, or
+                  HEIC/HEIF.
                 </p>
 
                 <div class="photo-slots">
@@ -1524,7 +1796,7 @@
                       <svg class="icon" viewBox="0 0 48 48" aria-hidden="true">
                         <use href="#icon-camera"></use>
                       </svg>
-                      <span class="photo-slot-text">Photo 2</span>
+                      <span class="photo-slot-text">Photo 2 (optional)</span>
                     </label>
                     <button
                       type="button"
@@ -1548,7 +1820,7 @@
                       <svg class="icon" viewBox="0 0 48 48" aria-hidden="true">
                         <use href="#icon-camera"></use>
                       </svg>
-                      <span class="photo-slot-text">Photo 3</span>
+                      <span class="photo-slot-text">Photo 3 (optional)</span>
                     </label>
                     <button
                       type="button"
@@ -1721,6 +1993,9 @@
                 >
                   <use href="#icon-arrow"></use></svg
               ></a>
+              <a href="/bathtub-hot-tub-refinishing/" class="card-sublink"
+                >Learn more</a
+              >
             </article>
 
             <article class="service-card" data-reveal>
@@ -1744,6 +2019,7 @@
                 >
                   <use href="#icon-arrow"></use></svg
               ></a>
+              <a href="/shower-refinishing/" class="card-sublink">Learn more</a>
             </article>
 
             <article class="service-card" data-reveal>
@@ -1768,6 +2044,9 @@
                 >
                   <use href="#icon-arrow"></use></svg
               ></a>
+              <a href="/sink-vanity-refinishing/" class="card-sublink"
+                >Learn more</a
+              >
             </article>
           </div>
         </div>
@@ -1861,10 +2140,10 @@
               >
                 <use href="#icon-camera"></use>
               </svg>
-              <h3>Send 3 Photos</h3>
+              <h3>Send Your Photos</h3>
               <p>
-                Snap your tub, shower, or sink from a few angles and text or
-                email them our way.
+                Snap your tub, shower, or sink from a few angles — at least 1
+                photo, up to 3 — and text or email them our way.
               </p>
             </div>
             <div class="process-step" data-reveal>
@@ -1927,7 +2206,7 @@
               straightforward work from a team that lives and works in this
               city, and stands behind every job with a written warranty.
             </p>
-            <a href="#home" class="btn-ghost btn">Get My Photo Quote</a>
+            <a href="/about/" class="btn-ghost btn">Our Craftsman</a>
           </div>
         </div>
       </section>
@@ -1989,12 +2268,19 @@
             <a href="tel:14035107859" class="btn-primary btn-primary--onDark">
               <span>Call Now</span>
             </a>
+            <p style="margin-top: 1rem">
+              <a
+                href="/cultured-marble-refinishing/"
+                style="color: var(--ink); text-decoration: underline"
+                >Learn more about cultured marble refinishing &rarr;</a
+              >
+            </p>
           </div>
         </div>
       </section>
 
       <!-- TILE REPLACEMENT -->
-      <section class="section tile-service" id="contact">
+      <section class="section tile-service" id="tile-supply">
         <div class="container">
           <div class="section-head section-head--center" data-reveal>
             <p class="eyebrow">Also Available</p>
@@ -2039,6 +2325,13 @@
             <a href="tel:14035107859" class="btn-primary">
               <span>Call Now</span>
             </a>
+            <p style="margin-top: 1rem">
+              <a
+                href="/tile-supply-installation/"
+                style="color: var(--ink); text-decoration: underline"
+                >Learn more about tile supply &amp; installation &rarr;</a
+              >
+            </p>
           </div>
         </div>
       </section>
@@ -2063,9 +2356,30 @@
             <h4>Quick Links</h4>
             <ul>
               <li><a href="#home">Home</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#about">About Us</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li>
+                <a href="/bathtub-hot-tub-refinishing/"
+                  >Bathtubs &amp; Hot Tubs</a
+                >
+              </li>
+              <li>
+                <a href="/cultured-marble-refinishing/">Cultured Marble</a>
+              </li>
+              <li>
+                <a href="/sink-vanity-refinishing/">Sinks &amp; Vanities</a>
+              </li>
+              <li><a href="/shower-refinishing/">Showers</a></li>
+              <li>
+                <a href="/jetted-tub-conversion/">Jetted Tub Conversion</a>
+              </li>
+              <li><a href="/ceramic-tile-refinishing/">Ceramic Tile</a></li>
+              <li><a href="/about/">Our Craftsman</a></li>
+              <li><a href="/commercial-services/">Commercial Services</a></li>
+              <li>
+                <a href="/tile-supply-installation/"
+                  >Tile Supply &amp; Installation</a
+                >
+              </li>
+              <li><a href="/contact-us/">Contact</a></li>
             </ul>
           </div>
           <div>
@@ -2091,22 +2405,50 @@
     </footer>
 
     <script>
-      var header = document.getElementById("site-header");
-      window.addEventListener(
-        "scroll",
-        function () {
-          header.classList.toggle("is-scrolled", window.scrollY > 8);
-        },
-        { passive: true },
-      );
+      var navPill = document.getElementById("navPill");
+      function updatePillState() {
+        navPill.classList.toggle("scrolled", window.scrollY > 8);
+      }
+      window.addEventListener("scroll", updatePillState, { passive: true });
+      updatePillState();
 
-      var navToggle = document.getElementById("nav-toggle");
-      var navLinks = document.querySelectorAll("#site-nav a");
-      navLinks.forEach(function (link) {
-        link.addEventListener("click", function () {
-          navToggle.checked = false;
-        });
+      var mobileToggle = document.getElementById("mobileToggle");
+      var mobileMenu = document.getElementById("mobileMenu");
+
+      function closeMobileMenu() {
+        mobileMenu.classList.remove("active");
+        mobileToggle.classList.remove("active");
+        mobileToggle.setAttribute("aria-expanded", "false");
+        document.body.style.overflow = "";
+        updatePillState();
+      }
+
+      mobileToggle.addEventListener("click", function () {
+        var isActive = mobileMenu.classList.contains("active");
+        if (isActive) {
+          closeMobileMenu();
+        } else {
+          mobileMenu.classList.add("active");
+          mobileToggle.classList.add("active");
+          mobileToggle.setAttribute("aria-expanded", "true");
+          navPill.classList.add("scrolled");
+          document.body.style.overflow = "hidden";
+        }
       });
+
+      document
+        .querySelectorAll("#mobileMenu .mobile-link, #mobileMenu a.mobile-header")
+        .forEach(function (link) {
+          link.addEventListener("click", closeMobileMenu);
+        });
+
+      window.toggleAccordion = function (element) {
+        element.classList.toggle("open");
+        var subMenu = element.nextElementSibling;
+        if (subMenu) {
+          subMenu.classList.toggle("open");
+        }
+      };
 
       if ("IntersectionObserver" in window) {
         var revealEls = document.querySelectorAll("[data-reveal]");
@@ -2150,7 +2492,7 @@
         var quoteResetBtn = document.getElementById("quoteResetBtn");
         var quoteName = document.getElementById("quoteName");
 
-        var REQUIRED_PHOTOS = 3;
+        var MIN_PHOTOS = 1;
         var ALLOWED_EXT = ["jpg", "jpeg", "png", "webp", "heic", "heif"];
         var submitBtnLabel = quoteSubmitBtn.querySelector("span");
         var submitBtnDefaultText = submitBtnLabel.textContent;
@@ -2198,7 +2540,7 @@
         }
 
         function updateStepTwoVisibility() {
-          if (filledCount() === REQUIRED_PHOTOS) {
+          if (filledCount() >= MIN_PHOTOS) {
             if (quoteStep2.hidden) {
               quoteStep2.hidden = false;
               quoteStep2.scrollIntoView({
@@ -2273,8 +2615,8 @@
           event.preventDefault();
           quoteSubmitError.hidden = true;
 
-          if (filledCount() !== REQUIRED_PHOTOS) {
-            photoError.textContent = "Please attach all 3 photos.";
+          if (filledCount() < MIN_PHOTOS) {
+            photoError.textContent = "Please attach at least 1 photo.";
             photoError.hidden = false;
             return;
           }

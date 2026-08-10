@@ -3,7 +3,7 @@
 /**
  * Photo quote form handler.
  *
- * Receives the hero "Show Us What Needs Refinishing" form (3 photos +
+ * Receives the hero "Show Us What Needs Refinishing" form (1-3 photos +
  * name/phone/email/notes), validates everything server-side, emails the
  * photos and details to the business, and emails the sender a confirmation.
  */
@@ -25,7 +25,8 @@ header('Content-Type: application/json; charset=utf-8');
 header('X-Content-Type-Options: nosniff');
 
 const MAX_PHOTO_BYTES = 20 * 1024 * 1024; // 20MB per photo
-const REQUIRED_PHOTO_COUNT = 3;
+const MIN_PHOTO_COUNT = 1;
+const MAX_PHOTO_COUNT = 3;
 const MIN_SECONDS_BEFORE_SUBMIT = 3; // basic bot heuristic
 const RATE_LIMIT_SECONDS = 30; // per IP, between submissions
 
@@ -299,14 +300,14 @@ $photos = []; // [['tmp' => ..., 'filename' => ..., 'format' => ...], ...]
 if (
     !is_array($photoFiles)
     || !isset($photoFiles['error']) || !is_array($photoFiles['error'])
-    || count($photoFiles['error']) !== REQUIRED_PHOTO_COUNT
+    || count($photoFiles['error']) < MIN_PHOTO_COUNT
+    || count($photoFiles['error']) > MAX_PHOTO_COUNT
 ) {
-    $errors[] = 'Please attach exactly 3 photos.';
+    $errors[] = 'Please attach at least 1 photo.';
 } else {
     foreach ($photoFiles['error'] as $i => $err) {
         if ($err === UPLOAD_ERR_NO_FILE) {
-            $errors[] = 'Please attach all 3 photos.';
-            continue;
+            continue; // photos 2 and 3 are optional
         }
         if ($err !== UPLOAD_ERR_OK) {
             $errors[] = 'One of your photos failed to upload. Please try again.';
@@ -339,8 +340,8 @@ if (
         ];
     }
 
-    if (count($photos) !== REQUIRED_PHOTO_COUNT && count($errors) === 0) {
-        $errors[] = 'Please attach exactly 3 valid photos.';
+    if (count($photos) < MIN_PHOTO_COUNT && count($errors) === 0) {
+        $errors[] = 'Please attach at least 1 valid photo.';
     }
 }
 
@@ -390,7 +391,7 @@ try {
         "Message:",
         $notes !== '' ? $notes : '(none)',
         "",
-        '3 photos attached.',
+        count($photos) . ' photo' . (count($photos) === 1 ? '' : 's') . ' attached.',
     ]);
 
     foreach ($photos as $photo) {
