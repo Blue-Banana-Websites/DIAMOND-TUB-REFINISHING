@@ -11,6 +11,80 @@
       name="description"
       content="Professional bathtub, shower &amp; sink refinishing in Calgary. Skip the cost and mess of replacement — send 3 photos and get a fast, upfront quote from Diamond Tub Refinishing."
     />
+    <link rel="canonical" href="https://diamondtubrefinishing.ca/" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://diamondtubrefinishing.ca/#business",
+        "name": "Diamond Tub Refinishing",
+        "url": "https://diamondtubrefinishing.ca/",
+        "image": "https://diamondtubrefinishing.ca/i/hero-1920-1080.webp",
+        "description": "Professional bathtub, shower & sink refinishing in Calgary. Skip the cost and mess of replacement — send 3 photos and get a fast, upfront quote from Diamond Tub Refinishing.",
+        "telephone": "+14035107859",
+        "email": "contact@diamondtubrefinishing.ca",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Calgary",
+          "addressRegion": "AB",
+          "addressCountry": "CA"
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Calgary" },
+          { "@type": "AdministrativeArea", "name": "Alberta" }
+        ],
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "08:00",
+          "closes": "17:00"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Refinishing Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Bathtub Refinishing",
+                "description": "Chips, stains, and dated colors resurfaced into a smooth, durable finish — in a single visit, without tearing out the tub."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Shower Refinishing",
+                "description": "Worn shower pans, walls, and enclosures brought back to a clean, non-slip, watertight finish that holds up to daily use."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Sink Refinishing",
+                "description": "Bathroom and kitchen sinks refinished to match — a fast, affordable way to update a fixture without replacing the counter."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Cultured Marble Refinishing & Repairs",
+                "description": "Repairing thermal-shock cracks and chips, restoring a yellowed or dulled gel coat, and refinishing cultured marble tubs, sinks, vanities, and showers to a smooth, factory-fresh shine."
+              }
+            }
+          ]
+        }
+      }
+    </script>
     <link
       rel="icon"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath fill='%23212930' d='M24 4 40 20 24 44 8 20z'/%3E%3Cpath fill='%23aae0e0' d='M24 4 32 20 24 44 16 20z'/%3E%3C/svg%3E"
@@ -972,6 +1046,9 @@
           transparent 40%
         );
       }
+      .about-copy h2 {
+        margin-bottom: var(--space-sm);
+      }
       .about-copy p {
         color: var(--ink-soft);
         margin-bottom: var(--space-sm);
@@ -989,95 +1066,102 @@
         }
       }
 
-      /* ---------- CTA banner ---------- */
-      .cta-banner {
+      /* ---------- Service of the month ---------- */
+      .service-month {
         background: var(--teal);
-        color: var(--ink);
-        text-align: center;
-        padding-block: var(--space-lg);
+        padding-block: var(--space-xl);
       }
-      .cta-banner h2 {
-        color: var(--ink);
-        margin-bottom: var(--space-xs);
-      }
-      .cta-banner p {
-        color: var(--ink-soft);
-        margin-inline: auto;
-        margin-bottom: var(--space-md);
-        font-size: var(--fs-lead);
-      }
-
-      /* ---------- Contact ---------- */
-      .contact-grid {
+      .service-month-grid {
         display: grid;
-        grid-template-columns: 0.85fr 1.15fr;
+        grid-template-columns: 0.95fr 1.05fr;
         gap: var(--space-lg);
-      }
-      .contact-info {
-        display: flex;
-        flex-direction: column;
-        gap: var(--space-md);
-      }
-      .contact-info p {
-        color: var(--ink-soft);
-      }
-      .info-line {
-        display: flex;
         align-items: center;
-        gap: 0.85rem;
-        font-weight: 600;
-        font-size: 1.05rem;
+      }
+      .service-month-media {
+        position: relative;
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        aspect-ratio: 4/5;
+        box-shadow: var(--shadow-lift);
+      }
+      .service-month-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .service-month-badge {
+        position: absolute;
+        top: var(--space-sm);
+        left: var(--space-sm);
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5em;
+        background: var(--peach-deep);
+        color: var(--ink);
+        font-weight: 700;
+        font-size: 0.8rem;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        padding: 0.6rem 1rem;
+        border-radius: 999px;
+        box-shadow: 0 0.6rem 1.4rem -0.6rem rgba(33, 41, 48, 0.5);
+      }
+      .service-month-badge .icon {
+        width: 16px;
+        height: 16px;
+        stroke: var(--ink);
+        stroke-width: 3;
+      }
+      .service-month-copy .eyebrow {
         color: var(--ink);
       }
-      .info-line .icon-badge {
-        width: 44px;
-        height: 44px;
-        border-radius: 12px;
-        background: var(--teal);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--ink);
-        flex: none;
+      .service-month-copy .eyebrow::before {
+        background: var(--ink);
       }
-      .info-line .icon-badge .icon {
-        width: 22px;
-        height: 22px;
-      }
-      .photo-cta {
-        background: var(--peach);
-        border-radius: var(--radius-md);
-        padding: var(--space-md);
-      }
-      .photo-cta h3 {
-        font-size: 1.1rem;
-        margin-bottom: 0.5rem;
-      }
-      .photo-cta p {
-        font-size: 0.92rem;
-        color: var(--ink-soft);
+      .service-month-copy h2 {
         margin-bottom: var(--space-sm);
       }
+      .service-month-copy p {
+        color: var(--ink-soft);
+        margin-bottom: var(--space-sm);
+        max-width: 42rem;
+      }
+      .service-month-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem 1.4rem;
+        margin-bottom: var(--space-md);
+      }
+      .service-month-list li {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-weight: 600;
+        font-size: var(--fs-small);
+        color: var(--ink);
+      }
+      .service-month-list .icon {
+        width: 18px;
+        height: 18px;
+        stroke: var(--ink);
+        stroke-width: 3;
+      }
+      @media (max-width: 900px) {
+        .service-month-grid {
+          grid-template-columns: 1fr;
+        }
+        .service-month-media {
+          order: -1;
+          aspect-ratio: 16/10;
+        }
+      }
 
-      .form-card {
-        background: var(--white);
-        border-radius: var(--radius-lg);
-        padding: clamp(1.6rem, 1.3rem + 1.5vw, 2.6rem);
-        box-shadow: var(--shadow-card);
-      }
-      .form-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: var(--space-sm);
-      }
+      /* ---------- Form fields (shared) ---------- */
       .field {
         display: flex;
         flex-direction: column;
         gap: 0.45rem;
         margin-bottom: var(--space-sm);
-      }
-      .field.full {
-        grid-column: 1 / -1;
       }
       .field label {
         font-size: 0.85rem;
@@ -1107,17 +1191,46 @@
         resize: vertical;
         min-height: 90px;
       }
-      @media (max-width: 620px) {
-        .form-grid {
+
+      /* ---------- Tile replacement ---------- */
+      .tile-service-media {
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        aspect-ratio: 21/9;
+        box-shadow: var(--shadow-card);
+        margin-bottom: var(--space-lg);
+      }
+      .tile-service-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .tile-service-columns {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-lg);
+        margin-bottom: var(--space-lg);
+      }
+      .tile-service-col h3 {
+        margin-bottom: var(--space-2xs);
+      }
+      .tile-service-col p {
+        color: var(--ink-soft);
+      }
+      .tile-service-cta {
+        text-align: center;
+      }
+      .tile-service-cta .btn-primary {
+        min-width: 220px;
+      }
+      @media (max-width: 700px) {
+        .tile-service-columns {
           grid-template-columns: 1fr;
-        }
-        .field.full {
-          grid-column: auto;
         }
       }
       @media (max-width: 900px) {
-        .contact-grid {
-          grid-template-columns: 1fr;
+        .tile-service-media {
+          aspect-ratio: 16/10;
         }
       }
 
@@ -1293,7 +1406,7 @@
             </svg>
             (403) 510-7859
           </a>
-          <a href="#contact" class="btn-primary btn-header">
+          <a href="#home" class="btn-primary btn-header">
             <span>Get My Photo Quote</span>
           </a>
           <label
@@ -1598,7 +1711,7 @@
                 Chips, stains, and dated colors resurfaced into a smooth,
                 durable finish — in a single visit, without tearing out the tub.
               </p>
-              <a href="#contact" class="card-link"
+              <a href="#home" class="card-link"
                 >Get a quote
                 <svg
                   class="icon"
@@ -1621,7 +1734,7 @@
                 Worn shower pans, walls, and enclosures brought back to a clean,
                 non-slip, watertight finish that holds up to daily use.
               </p>
-              <a href="#contact" class="card-link"
+              <a href="#home" class="card-link"
                 >Get a quote
                 <svg
                   class="icon"
@@ -1645,7 +1758,7 @@
                 affordable way to update a fixture without replacing the
                 counter.
               </p>
-              <a href="#contact" class="card-link"
+              <a href="#home" class="card-link"
                 >Get a quote
                 <svg
                   class="icon"
@@ -1814,147 +1927,118 @@
               straightforward work from a team that lives and works in this
               city, and stands behind every job with a written warranty.
             </p>
-            <a href="#contact" class="btn-ghost btn">Get My Photo Quote</a>
+            <a href="#home" class="btn-ghost btn">Get My Photo Quote</a>
           </div>
         </div>
       </section>
 
-      <!-- CTA BANNER -->
-      <section class="cta-banner">
-        <div class="container">
-          <h2>Still deciding?</h2>
-          <p>
-            Send 3 photos — get a straightforward price back in one message.
-          </p>
-          <a href="#contact" class="btn-primary btn-primary--onDark">
-            <span>Get My Photo Quote</span>
-          </a>
+      <!-- SERVICE OF THE MONTH -->
+      <section class="service-month">
+        <div class="container service-month-grid">
+          <div class="service-month-media" data-reveal>
+            <!-- Placeholder photo — swap for a real cultured marble refinish photo when available -->
+            <img
+              src="i/hero-1920-1080.webp"
+              alt="Freshly refinished bathroom surface, glossy and like new"
+            />
+            <span class="service-month-badge">
+              <svg class="icon" viewBox="0 0 48 48" aria-hidden="true">
+                <use href="#icon-calendar"></use>
+              </svg>
+              Service of the Month
+            </span>
+          </div>
+          <div class="service-month-copy" data-reveal>
+            <p class="eyebrow">August 2026</p>
+            <h2>Cultured Marble Refinishing &amp; Repairs</h2>
+            <p>
+              Cultured marble tubs, sinks, vanities, and showers are built to
+              last — but the glossy gel coat that gives them their shine
+              doesn't last forever. Heat, hard water, and years of cleaning
+              can leave it yellowed, dull, cracked, or chipped.
+            </p>
+            <p>
+              This month we're focused on bringing cultured marble surfaces
+              back to life: repairing thermal-shock cracks and chips,
+              restoring a yellowed or dulled gel coat, and refinishing the
+              whole piece to a smooth, factory-fresh shine — all without
+              tearing out the fixture. Refinishing runs a fraction of
+              replacement cost and can add years of life to a surface that's
+              otherwise still structurally sound.
+            </p>
+            <ul class="service-month-list">
+              <li>
+                <svg class="icon" viewBox="0 0 48 48" aria-hidden="true">
+                  <use href="#icon-check"></use>
+                </svg>
+                Cracks &amp; chips repaired
+              </li>
+              <li>
+                <svg class="icon" viewBox="0 0 48 48" aria-hidden="true">
+                  <use href="#icon-check"></use>
+                </svg>
+                Yellowed gel coat restored
+              </li>
+              <li>
+                <svg class="icon" viewBox="0 0 48 48" aria-hidden="true">
+                  <use href="#icon-check"></use>
+                </svg>
+                Tubs, sinks, vanities &amp; showers
+              </li>
+            </ul>
+            <a href="tel:14035107859" class="btn-primary btn-primary--onDark">
+              <span>Call Now</span>
+            </a>
+          </div>
         </div>
       </section>
 
-      <!-- CONTACT -->
-      <section class="section" id="contact">
+      <!-- TILE REPLACEMENT -->
+      <section class="section tile-service" id="contact">
         <div class="container">
-          <div class="section-head" data-reveal>
-            <p class="eyebrow">Contact</p>
-            <h2>Get your fast photo quote.</h2>
+          <div class="section-head section-head--center" data-reveal>
+            <p class="eyebrow">Also Available</p>
+            <h2>We Also Do Tile Replacement!</h2>
             <p>
-              Send 3 photos of your tub, shower, or sink and we'll get back to
-              you with straightforward pricing — usually the same day.
+              From a single cracked shower tile to a full re-tile, we source,
+              supply, replace, and install tile of every type — matched to
+              what's already there whenever we can.
             </p>
           </div>
 
-          <div class="contact-grid">
-            <div class="contact-info" data-reveal>
-              <a href="tel:14035107859" class="info-line">
-                <span class="icon-badge"
-                  ><svg class="icon" viewBox="0 0 48 48" aria-hidden="true">
-                    <use href="#icon-phone"></use></svg
-                ></span>
-                (403) 510-7859
-              </a>
-              <a
-                href="mailto:contact@diamondtubrefinishing.ca"
-                class="info-line"
-              >
-                <span class="icon-badge"
-                  ><svg class="icon" viewBox="0 0 48 48" aria-hidden="true">
-                    <use href="#icon-mail"></use></svg
-                ></span>
-                contact@diamondtubrefinishing.ca
-              </a>
-              <div class="info-line">
-                <span class="icon-badge"
-                  ><svg class="icon" viewBox="0 0 48 48" aria-hidden="true">
-                    <use href="#icon-pin"></use></svg
-                ></span>
-                Proudly serving Calgary &amp; area
-              </div>
+          <div class="tile-service-media" data-reveal>
+            <!-- Placeholder photo — swap for a real tile replacement photo when available -->
+            <img
+              src="i/hero-1920-1080.webp"
+              alt="Freshly installed tile surface, clean and like new"
+            />
+          </div>
 
-              <div class="photo-cta">
-                <h3>Prefer to email your photos?</h3>
-                <p>
-                  Attach your 3 photos directly and we'll reply with your quote
-                  — no form required.
-                </p>
-                <a
-                  href="mailto:contact@diamondtubrefinishing.ca?subject=Photo%20Quote%20Request&body=Hi%20Diamond%20Tub%2C%20I've%20attached%203%20photos%20of%20my%20tub%2Fshower%2Fsink%20for%20a%20quote."
-                  class="btn btn-ghost"
-                  style="background: var(--white)"
-                  >Email Us Your Photos</a
-                >
-              </div>
+          <div class="tile-service-columns">
+            <div class="tile-service-col" data-reveal>
+              <h3>Repairs &amp; replacement</h3>
+              <p>
+                Cracked, chipped, or water-damaged tile around tubs, showers,
+                and vanities — repaired or replaced without disturbing the
+                surrounding surface. We also handle full floor and wall
+                re-tiles when it's time for a fresh look.
+              </p>
             </div>
+            <div class="tile-service-col" data-reveal>
+              <h3>Any tile, any style</h3>
+              <p>
+                Ceramic, porcelain, natural stone, mosaic, and glass — we
+                source and supply the tile too, including the hard part:
+                matching older or discontinued tile so the new piece blends
+                in instead of standing out.
+              </p>
+            </div>
+          </div>
 
-            <form
-              class="form-card"
-              action="mailto:contact@diamondtubrefinishing.ca"
-              method="post"
-              enctype="text/plain"
-              data-reveal
-            >
-              <div class="form-grid">
-                <div class="field">
-                  <label for="name">Full name</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Jane Smith"
-                    required
-                  />
-                </div>
-                <div class="field">
-                  <label for="phone">Phone number</label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    placeholder="(403) 510-7859"
-                    required
-                  />
-                </div>
-                <div class="field full">
-                  <label for="email">Email address</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="jane@email.com"
-                    required
-                  />
-                </div>
-                <div class="field full">
-                  <label for="service">What needs refinishing?</label>
-                  <select id="service" name="service">
-                    <option>Bathtub</option>
-                    <option>Shower</option>
-                    <option>Sink</option>
-                    <option>Not sure yet</option>
-                  </select>
-                </div>
-                <div class="field full">
-                  <label for="notes">Anything we should know?</label>
-                  <textarea
-                    id="notes"
-                    name="notes"
-                    placeholder="Tell us about the chips, stains, or color you're hoping for."
-                  ></textarea>
-                </div>
-              </div>
-              <button
-                type="submit"
-                class="btn btn-ghost"
-                style="
-                  width: 100%;
-                  background: var(--teal);
-                  color: var(--ink);
-                  border-color: var(--teal);
-                "
-              >
-                Send My Info
-              </button>
-            </form>
+          <div class="tile-service-cta" data-reveal>
+            <a href="tel:14035107859" class="btn-primary">
+              <span>Call Now</span>
+            </a>
           </div>
         </div>
       </section>
@@ -1994,6 +2078,7 @@
                 >
               </li>
               <li>Calgary, Alberta</li>
+              <li>Mon–Fri, 8am–5pm</li>
             </ul>
           </div>
         </div>
