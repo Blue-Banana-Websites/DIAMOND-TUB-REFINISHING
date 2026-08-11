@@ -35,13 +35,7 @@
         ],
         "openingHoursSpecification": {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday"
-          ],
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
           "opens": "08:00",
           "closes": "17:00"
         },
@@ -457,7 +451,7 @@
         height: 30px;
       }
       .brand span em {
-        color: var(--peach-deep);
+        color: var(--peach);
         font-style: normal;
       }
 
@@ -505,6 +499,9 @@
         transform: rotate(180deg);
       }
 
+      .nav-item {
+        position: relative;
+      }
       .nav-dropdown {
         position: absolute;
         top: 100%;
@@ -1573,82 +1570,96 @@
 
     <header class="site-header" id="site-header">
       <div class="nav-pill" id="navPill">
-      <div class="header-inner">
-        <a href="#home" class="brand">
-          <span>Diamond Tub <em>Refinishing</em></span>
-        </a>
-
-        <nav class="nav" id="site-nav">
-          <ul class="nav-menu">
-            <li class="nav-item">
-              <span class="nav-link" tabindex="0"
-                >Refinishing &amp; Repairs
-                <span class="chevron" aria-hidden="true">&#x25BC;</span></span
-              >
-              <div class="nav-dropdown">
-                <div class="nav-dropdown-col">
-                  <div class="nav-dropdown-title">Tubs &amp; Showers</div>
-                  <a href="/bathtub-hot-tub-refinishing/" class="nav-sub-link">
-                    <span class="nav-sub-title">Bathtubs &amp; Hot Tubs</span>
-                    <span class="nav-sub-desc">Chip &amp; stain resurfacing</span>
-                  </a>
-                  <a href="/shower-refinishing/" class="nav-sub-link">
-                    <span class="nav-sub-title">Showers</span>
-                    <span class="nav-sub-desc">Pans, walls &amp; enclosures</span>
-                  </a>
-                </div>
-                <div class="nav-dropdown-col">
-                  <div class="nav-dropdown-title">Sinks &amp; Surfaces</div>
-                  <a href="/sink-vanity-refinishing/" class="nav-sub-link">
-                    <span class="nav-sub-title">Sinks &amp; Vanities</span>
-                    <span class="nav-sub-desc">Bathroom &amp; kitchen</span>
-                  </a>
-                  <a href="/cultured-marble-refinishing/" class="nav-sub-link">
-                    <span class="nav-sub-title">Cultured Marble</span>
-                    <span class="nav-sub-desc">Gel-coat &amp; crack repair</span>
-                  </a>
-                </div>
-                <div class="nav-dropdown-col">
-                  <div class="nav-dropdown-title">Specialty</div>
-                  <a href="/jetted-tub-conversion/" class="nav-sub-link">
-                    <span class="nav-sub-title">Jetted Tub Conversion</span>
-                    <span class="nav-sub-desc">Jet line service &amp; refinish</span>
-                  </a>
-                  <a href="/ceramic-tile-refinishing/" class="nav-sub-link">
-                    <span class="nav-sub-title">Ceramic Tile</span>
-                    <span class="nav-sub-desc">In-place tile reglazing</span>
-                  </a>
-                </div>
-              </div>
-            </li>
-
-            <li class="nav-item">
-              <a href="/commercial-services/" class="nav-link">Commercial</a>
-            </li>
-            <li class="nav-item">
-              <a href="/contact-us/" class="nav-link">Contact</a>
-            </li>
-          </ul>
-        </nav>
-
-        <div class="header-actions">
-          <a href="tel:14035107859" class="btn-primary btn-header">
-            <span>(403) 510-7859</span>
+        <div class="header-inner">
+          <a href="#home" class="brand">
+            <span>Diamond Tub <em>Refinishing</em></span>
           </a>
-          <button
-            type="button"
-            class="mobile-toggle"
-            id="mobileToggle"
-            aria-label="Toggle navigation"
-            aria-expanded="false"
-          >
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </button>
+
+          <nav class="nav" id="site-nav">
+            <ul class="nav-menu">
+              <li class="nav-item">
+                <span class="nav-link" tabindex="0"
+                  >Refinishing &amp; Repairs
+                  <span class="chevron" aria-hidden="true">&#x25BC;</span></span
+                >
+                <div class="nav-dropdown">
+                  <div class="nav-dropdown-col">
+                    <div class="nav-dropdown-title">Tubs &amp; Showers</div>
+                    <a
+                      href="/bathtub-hot-tub-refinishing/"
+                      class="nav-sub-link"
+                    >
+                      <span class="nav-sub-title">Bathtubs &amp; Hot Tubs</span>
+                      <span class="nav-sub-desc"
+                        >Chip &amp; stain resurfacing</span
+                      >
+                    </a>
+                    <a href="/shower-refinishing/" class="nav-sub-link">
+                      <span class="nav-sub-title">Showers</span>
+                      <span class="nav-sub-desc"
+                        >Pans, walls &amp; enclosures</span
+                      >
+                    </a>
+                  </div>
+                  <div class="nav-dropdown-col">
+                    <div class="nav-dropdown-title">Sinks &amp; Surfaces</div>
+                    <a href="/sink-vanity-refinishing/" class="nav-sub-link">
+                      <span class="nav-sub-title">Sinks &amp; Vanities</span>
+                      <span class="nav-sub-desc">Bathroom &amp; kitchen</span>
+                    </a>
+                    <a
+                      href="/cultured-marble-refinishing/"
+                      class="nav-sub-link"
+                    >
+                      <span class="nav-sub-title">Cultured Marble</span>
+                      <span class="nav-sub-desc"
+                        >Gel-coat &amp; crack repair</span
+                      >
+                    </a>
+                  </div>
+                  <div class="nav-dropdown-col">
+                    <div class="nav-dropdown-title">Specialty</div>
+                    <a href="/jetted-tub-conversion/" class="nav-sub-link">
+                      <span class="nav-sub-title">Jetted Tub Conversion</span>
+                      <span class="nav-sub-desc"
+                        >Jet line service &amp; refinish</span
+                      >
+                    </a>
+                    <a href="/ceramic-tile-refinishing/" class="nav-sub-link">
+                      <span class="nav-sub-title">Ceramic Tile</span>
+                      <span class="nav-sub-desc">In-place tile reglazing</span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nav-item">
+                <a href="/commercial-services/" class="nav-link">Commercial</a>
+              </li>
+              <li class="nav-item">
+                <a href="/contact-us/" class="nav-link">Contact</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="header-actions">
+            <a href="tel:14035107859" class="btn-primary btn-header">
+              <span>(403) 510-7859</span>
+            </a>
+            <button
+              type="button"
+              class="mobile-toggle"
+              id="mobileToggle"
+              aria-label="Toggle navigation"
+              aria-expanded="false"
+            >
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </button>
+          </div>
         </div>
       </div>
-    </div>
     </header>
 
     <div class="mobile-menu" id="mobileMenu">
@@ -1711,7 +1722,9 @@
           <div class="quote-card" id="quoteCard">
             <div class="quote-intro" id="quoteIntro">
               <p class="eyebrow">Get a Fast Photo Quote</p>
-              <h3>Send 1 to 3 photos. We'll send you a straightforward price.</h3>
+              <h3>
+                Send 1 to 3 photos. We'll send you a straightforward price.
+              </h3>
               <p class="fine">No home visit. No sales pitch. No obligation.</p>
 
               <button type="button" class="btn-primary" id="quoteStartBtn">
@@ -2206,7 +2219,7 @@
               straightforward work from a team that lives and works in this
               city, and stands behind every job with a written warranty.
             </p>
-            <a href="/about/" class="btn-ghost btn">Our Craftsman</a>
+            <a href="/about/" class="btn-ghost btn">Meet Our Craftsmen</a>
           </div>
         </div>
       </section>
@@ -2232,18 +2245,17 @@
             <h2>Cultured Marble Refinishing &amp; Repairs</h2>
             <p>
               Cultured marble tubs, sinks, vanities, and showers are built to
-              last — but the glossy gel coat that gives them their shine
-              doesn't last forever. Heat, hard water, and years of cleaning
-              can leave it yellowed, dull, cracked, or chipped.
+              last — but the glossy gel coat that gives them their shine doesn't
+              last forever. Heat, hard water, and years of cleaning can leave it
+              yellowed, dull, cracked, or chipped.
             </p>
             <p>
-              This month we're focused on bringing cultured marble surfaces
-              back to life: repairing thermal-shock cracks and chips,
-              restoring a yellowed or dulled gel coat, and refinishing the
-              whole piece to a smooth, factory-fresh shine — all without
-              tearing out the fixture. Refinishing runs a fraction of
-              replacement cost and can add years of life to a surface that's
-              otherwise still structurally sound.
+              This month we're focused on bringing cultured marble surfaces back
+              to life: repairing thermal-shock cracks and chips, restoring a
+              yellowed or dulled gel coat, and refinishing the whole piece to a
+              smooth, factory-fresh shine — all without tearing out the fixture.
+              Refinishing runs a fraction of replacement cost and can add years
+              of life to a surface that's otherwise still structurally sound.
             </p>
             <ul class="service-month-list">
               <li>
@@ -2306,17 +2318,17 @@
               <p>
                 Cracked, chipped, or water-damaged tile around tubs, showers,
                 and vanities — repaired or replaced without disturbing the
-                surrounding surface. We also handle full floor and wall
-                re-tiles when it's time for a fresh look.
+                surrounding surface. We also handle full floor and wall re-tiles
+                when it's time for a fresh look.
               </p>
             </div>
             <div class="tile-service-col" data-reveal>
               <h3>Any tile, any style</h3>
               <p>
-                Ceramic, porcelain, natural stone, mosaic, and glass — we
-                source and supply the tile too, including the hard part:
-                matching older or discontinued tile so the new piece blends
-                in instead of standing out.
+                Ceramic, porcelain, natural stone, mosaic, and glass — we source
+                and supply the tile too, including the hard part: matching older
+                or discontinued tile so the new piece blends in instead of
+                standing out.
               </p>
             </div>
           </div>
@@ -2372,7 +2384,7 @@
                 <a href="/jetted-tub-conversion/">Jetted Tub Conversion</a>
               </li>
               <li><a href="/ceramic-tile-refinishing/">Ceramic Tile</a></li>
-              <li><a href="/about/">Our Craftsman</a></li>
+              <li><a href="/about/">Our Team</a></li>
               <li><a href="/commercial-services/">Commercial Services</a></li>
               <li>
                 <a href="/tile-supply-installation/"
@@ -2437,7 +2449,9 @@
       });
 
       document
-        .querySelectorAll("#mobileMenu .mobile-link, #mobileMenu a.mobile-header")
+        .querySelectorAll(
+          "#mobileMenu .mobile-link, #mobileMenu a.mobile-header",
+        )
         .forEach(function (link) {
           link.addEventListener("click", closeMobileMenu);
         });

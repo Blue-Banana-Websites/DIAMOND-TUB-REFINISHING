@@ -14,6 +14,78 @@
       rel="canonical"
       href="https://diamondtubrefinishing.ca/bathtub-hot-tub-refinishing/"
     />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How long does bathtub refinishing take?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most bathtub refinishing jobs are completed in a single visit, typically 3 to 4 hours of hands-on work. Hot tub shells and tubs with more extensive chip or crack repair can take longer, since repairs need to fully cure before the coating goes on."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How soon can I use my tub or hot tub after refinishing?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We recommend waiting 24 to 48 hours before using a freshly refinished tub or hot tub shell, depending on the coating and conditions on the day of the job. We'll give you an exact timeline before we leave."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is there a strong smell during refinishing?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, there's an odor while the coating is sprayed, similar to fresh paint. We run extractor fans and ventilate the space throughout the job to keep it to a minimum, and it dissipates quickly once the coating flashes off."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long will a refinished tub or hot tub shell last?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "With normal care and non-abrasive cleaning, a professionally refinished surface typically lasts 10 to 15+ years before it needs attention again — comparable to the lifespan of the original factory finish."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you change the color of my tub or hot tub shell?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Custom color matching is available whether you're matching an existing surround or switching to a completely new color. Let us know what you're going for when you send photos for your quote."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What types of tubs and hot tubs can be refinished?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We refinish porcelain, cast iron, acrylic, and fiberglass bathtubs, along with acrylic and fiberglass hot tub and swim spa shells, jetted and whirlpool tubs, and cultured marble tubs and surrounds."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you repair chips and cracks, or just recoat the surface?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Both. Chips, cracks, worn jet fittings, and other damage are repaired before the coating goes on. Recoating over unrepaired damage is a shortcut that leads to early failure, so repair always comes first."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is refinishing covered by a warranty?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, every bathtub and hot tub refinishing job we complete is backed by a written warranty. We'll go over the specific coverage for your project as part of your quote."
+            }
+          }
+        ]
+      }
+    </script>
     <link
       rel="icon"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath fill='%23212930' d='M24 4 40 20 24 44 8 20z'/%3E%3Cpath fill='%23aae0e0' d='M24 4 32 20 24 44 16 20z'/%3E%3C/svg%3E"
@@ -398,6 +470,9 @@
         transform: rotate(180deg);
       }
 
+      .nav-item {
+        position: relative;
+      }
       .nav-dropdown {
         position: absolute;
         top: 100%;
@@ -678,6 +753,374 @@
         }
       }
 
+      /* ---------- Shared section helpers ---------- */
+      .section--heron {
+        background: var(--heron);
+      }
+      .section-head {
+        max-width: 46rem;
+        margin-bottom: var(--space-lg);
+      }
+      .section-head--center {
+        margin-inline: auto;
+        text-align: center;
+      }
+      .section-head p {
+        color: var(--ink-soft);
+        margin-inline: auto;
+        margin-top: var(--space-xs);
+      }
+      .icon-badge {
+        width: 52px;
+        height: 52px;
+        border-radius: 14px;
+        flex: none;
+        background: var(--peach);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--ink);
+      }
+      .icon-badge .icon {
+        width: 26px;
+        height: 26px;
+      }
+
+      /* ---------- Why grid ---------- */
+      .why-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-md) var(--space-lg);
+      }
+      .why-item {
+        display: flex;
+        gap: var(--space-sm);
+      }
+      .why-item h3 {
+        font-size: 1.15rem;
+        margin-bottom: 0.4rem;
+      }
+      .why-item p {
+        color: var(--ink-soft);
+        font-size: 0.96rem;
+        margin: 0;
+      }
+      @media (max-width: 720px) {
+        .why-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* ---------- Before &amp; after slider ---------- */
+      .ba-wrap {
+        max-width: 780px;
+        margin-inline: auto;
+      }
+      .ba-media {
+        position: relative;
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        aspect-ratio: 4/3;
+        box-shadow: var(--shadow-lift);
+        --reveal: 50%;
+      }
+      .ba-media img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        -webkit-user-drag: none;
+        user-select: none;
+        pointer-events: none;
+      }
+      .ba-img-before {
+        filter: saturate(0.75) brightness(0.92) sepia(0.12);
+      }
+      .ba-img-after {
+        clip-path: inset(0 calc(100% - var(--reveal)) 0 0);
+      }
+      .ba-handle {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: var(--reveal);
+        width: 3px;
+        background: var(--white);
+        transform: translateX(-50%);
+        pointer-events: none;
+        box-shadow: 0 0 0 1px rgba(33, 41, 48, 0.15);
+        z-index: 2;
+      }
+      .ba-handle-grip {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        background: var(--white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: var(--shadow-card);
+      }
+      .ba-handle-grip .icon {
+        width: 22px;
+        height: 22px;
+        stroke: var(--ink);
+        stroke-width: 2.4;
+      }
+      .ba-range {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        opacity: 0;
+        cursor: ew-resize;
+        -webkit-appearance: none;
+        appearance: none;
+        z-index: 3;
+      }
+      .ba-range::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 100%;
+        height: 100%;
+      }
+      .ba-range::-moz-range-thumb {
+        width: 2px;
+        height: 100%;
+        opacity: 0;
+        border: none;
+      }
+      .ba-tag {
+        position: absolute;
+        top: 16px;
+        padding: 0.4rem 0.9rem;
+        border-radius: 999px;
+        font-size: 0.74rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        background: rgba(33, 41, 48, 0.68);
+        color: var(--white);
+        z-index: 1;
+        pointer-events: none;
+      }
+      .ba-tag-before {
+        left: 16px;
+      }
+      .ba-tag-after {
+        right: 16px;
+      }
+      .ba-caption {
+        text-align: center;
+        color: var(--ink-soft);
+        font-size: var(--fs-small);
+        margin-top: var(--space-sm);
+      }
+
+      /* ---------- Vertical process list ---------- */
+      .process-list-v {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-md);
+        max-width: 760px;
+        margin-inline: auto;
+      }
+      .process-step-v {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: var(--space-sm);
+        align-items: start;
+      }
+      .process-num-v {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: var(--white);
+        border: 2.5px solid var(--ink);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--font-display);
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: var(--ink);
+        flex: none;
+      }
+      .process-step-v h3 {
+        margin-bottom: 0.4rem;
+      }
+      .process-step-v p {
+        color: var(--ink-soft);
+        margin: 0;
+      }
+
+      /* ---------- Materials grid ---------- */
+      .materials-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-sm);
+      }
+      .material-card {
+        background: var(--white);
+        border-radius: var(--radius-md);
+        padding: var(--space-sm);
+        box-shadow: var(--shadow-card);
+      }
+      .material-card h3 {
+        font-size: 1.08rem;
+        margin-bottom: 0.5rem;
+      }
+      .material-card p {
+        color: var(--ink-soft);
+        font-size: var(--fs-small);
+        margin: 0;
+      }
+      @media (max-width: 900px) {
+        .materials-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 600px) {
+        .materials-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* ---------- Care list ---------- */
+      .care-list {
+        max-width: 820px;
+        margin-inline: auto;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-xs);
+      }
+      .care-list li {
+        padding: 1.1rem 1.4rem;
+        background: var(--white);
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-card);
+        color: var(--ink-soft);
+        font-size: var(--fs-small);
+      }
+      .care-list li strong {
+        color: var(--ink);
+      }
+
+      /* ---------- Testimonials ---------- */
+      .testimonial-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-sm);
+      }
+      .testimonial-card {
+        background: var(--white);
+        border-radius: var(--radius-md);
+        padding: var(--space-sm);
+        box-shadow: var(--shadow-card);
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-2xs);
+      }
+      .testimonial-stars {
+        color: var(--peach-deep);
+        letter-spacing: 0.15em;
+      }
+      .testimonial-quote {
+        color: var(--ink-soft);
+        font-size: var(--fs-small);
+        margin: 0;
+      }
+      .testimonial-name {
+        font-weight: 700;
+        font-size: var(--fs-small);
+        color: var(--ink);
+        margin: 0;
+      }
+      @media (max-width: 900px) {
+        .testimonial-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* ---------- FAQ accordion ---------- */
+      .faq-list {
+        max-width: 820px;
+        margin-inline: auto;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-2xs);
+      }
+      .faq-item {
+        border: 1px solid rgba(33, 41, 48, 0.12);
+        border-radius: var(--radius-md);
+        background: var(--white);
+        overflow: hidden;
+      }
+      .faq-question {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--space-sm);
+        padding: 1.2rem 1.5rem;
+        background: none;
+        border: none;
+        text-align: left;
+        font-family: var(--font-body);
+        font-weight: 600;
+        font-size: 1rem;
+        color: var(--ink);
+        cursor: pointer;
+      }
+      .faq-chevron {
+        flex: none;
+        font-size: 12px;
+        color: var(--peach-deep);
+        transition: transform 0.25s ease;
+      }
+      .faq-item.open .faq-chevron {
+        transform: rotate(180deg);
+      }
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+      }
+      .faq-answer p {
+        padding: 0 1.5rem 1.2rem;
+        color: var(--ink-soft);
+        margin: 0;
+        max-width: none;
+      }
+
+      /* ---------- Final CTA ---------- */
+      .final-cta {
+        background: linear-gradient(180deg, var(--cream) 0%, var(--peach) 100%);
+        text-align: center;
+      }
+      .final-cta-copy {
+        max-width: 42rem;
+        margin-inline: auto;
+      }
+      .final-cta-copy p {
+        margin-inline: auto;
+        color: var(--ink-soft);
+        font-size: var(--fs-lead);
+        margin-top: var(--space-xs);
+      }
+      .final-cta-actions {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: var(--space-2xs);
+        margin-top: var(--space-md);
+      }
+
       /* ---------- Footer ---------- */
       .site-footer {
         background: var(--ink);
@@ -828,82 +1271,96 @@
 
     <header class="site-header" id="site-header">
       <div class="nav-pill" id="navPill">
-      <div class="header-inner">
-        <a href="/" class="brand">
-          <span>Diamond Tub <em>Refinishing</em></span>
-        </a>
-
-        <nav class="nav" id="site-nav">
-          <ul class="nav-menu">
-            <li class="nav-item">
-              <span class="nav-link" tabindex="0"
-                >Refinishing &amp; Repairs
-                <span class="chevron" aria-hidden="true">&#x25BC;</span></span
-              >
-              <div class="nav-dropdown">
-                <div class="nav-dropdown-col">
-                  <div class="nav-dropdown-title">Tubs &amp; Showers</div>
-                  <a href="/bathtub-hot-tub-refinishing/" class="nav-sub-link">
-                    <span class="nav-sub-title">Bathtubs &amp; Hot Tubs</span>
-                    <span class="nav-sub-desc">Chip &amp; stain resurfacing</span>
-                  </a>
-                  <a href="/shower-refinishing/" class="nav-sub-link">
-                    <span class="nav-sub-title">Showers</span>
-                    <span class="nav-sub-desc">Pans, walls &amp; enclosures</span>
-                  </a>
-                </div>
-                <div class="nav-dropdown-col">
-                  <div class="nav-dropdown-title">Sinks &amp; Surfaces</div>
-                  <a href="/sink-vanity-refinishing/" class="nav-sub-link">
-                    <span class="nav-sub-title">Sinks &amp; Vanities</span>
-                    <span class="nav-sub-desc">Bathroom &amp; kitchen</span>
-                  </a>
-                  <a href="/cultured-marble-refinishing/" class="nav-sub-link">
-                    <span class="nav-sub-title">Cultured Marble</span>
-                    <span class="nav-sub-desc">Gel-coat &amp; crack repair</span>
-                  </a>
-                </div>
-                <div class="nav-dropdown-col">
-                  <div class="nav-dropdown-title">Specialty</div>
-                  <a href="/jetted-tub-conversion/" class="nav-sub-link">
-                    <span class="nav-sub-title">Jetted Tub Conversion</span>
-                    <span class="nav-sub-desc">Jet line service &amp; refinish</span>
-                  </a>
-                  <a href="/ceramic-tile-refinishing/" class="nav-sub-link">
-                    <span class="nav-sub-title">Ceramic Tile</span>
-                    <span class="nav-sub-desc">In-place tile reglazing</span>
-                  </a>
-                </div>
-              </div>
-            </li>
-
-            <li class="nav-item">
-              <a href="/commercial-services/" class="nav-link">Commercial</a>
-            </li>
-            <li class="nav-item">
-              <a href="/contact-us/" class="nav-link">Contact</a>
-            </li>
-          </ul>
-        </nav>
-
-        <div class="header-actions">
-          <a href="tel:14035107859" class="btn-primary btn-header">
-            <span>(403) 510-7859</span>
+        <div class="header-inner">
+          <a href="/" class="brand">
+            <span>Diamond Tub <em>Refinishing</em></span>
           </a>
-          <button
-            type="button"
-            class="mobile-toggle"
-            id="mobileToggle"
-            aria-label="Toggle navigation"
-            aria-expanded="false"
-          >
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </button>
+
+          <nav class="nav" id="site-nav">
+            <ul class="nav-menu">
+              <li class="nav-item">
+                <span class="nav-link" tabindex="0"
+                  >Refinishing &amp; Repairs
+                  <span class="chevron" aria-hidden="true">&#x25BC;</span></span
+                >
+                <div class="nav-dropdown">
+                  <div class="nav-dropdown-col">
+                    <div class="nav-dropdown-title">Tubs &amp; Showers</div>
+                    <a
+                      href="/bathtub-hot-tub-refinishing/"
+                      class="nav-sub-link"
+                    >
+                      <span class="nav-sub-title">Bathtubs &amp; Hot Tubs</span>
+                      <span class="nav-sub-desc"
+                        >Chip &amp; stain resurfacing</span
+                      >
+                    </a>
+                    <a href="/shower-refinishing/" class="nav-sub-link">
+                      <span class="nav-sub-title">Showers</span>
+                      <span class="nav-sub-desc"
+                        >Pans, walls &amp; enclosures</span
+                      >
+                    </a>
+                  </div>
+                  <div class="nav-dropdown-col">
+                    <div class="nav-dropdown-title">Sinks &amp; Surfaces</div>
+                    <a href="/sink-vanity-refinishing/" class="nav-sub-link">
+                      <span class="nav-sub-title">Sinks &amp; Vanities</span>
+                      <span class="nav-sub-desc">Bathroom &amp; kitchen</span>
+                    </a>
+                    <a
+                      href="/cultured-marble-refinishing/"
+                      class="nav-sub-link"
+                    >
+                      <span class="nav-sub-title">Cultured Marble</span>
+                      <span class="nav-sub-desc"
+                        >Gel-coat &amp; crack repair</span
+                      >
+                    </a>
+                  </div>
+                  <div class="nav-dropdown-col">
+                    <div class="nav-dropdown-title">Specialty</div>
+                    <a href="/jetted-tub-conversion/" class="nav-sub-link">
+                      <span class="nav-sub-title">Jetted Tub Conversion</span>
+                      <span class="nav-sub-desc"
+                        >Jet line service &amp; refinish</span
+                      >
+                    </a>
+                    <a href="/ceramic-tile-refinishing/" class="nav-sub-link">
+                      <span class="nav-sub-title">Ceramic Tile</span>
+                      <span class="nav-sub-desc">In-place tile reglazing</span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nav-item">
+                <a href="/commercial-services/" class="nav-link">Commercial</a>
+              </li>
+              <li class="nav-item">
+                <a href="/contact-us/" class="nav-link">Contact</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="header-actions">
+            <a href="tel:14035107859" class="btn-primary btn-header">
+              <span>(403) 510-7859</span>
+            </a>
+            <button
+              type="button"
+              class="mobile-toggle"
+              id="mobileToggle"
+              aria-label="Toggle navigation"
+              aria-expanded="false"
+            >
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </button>
+          </div>
         </div>
       </div>
-    </div>
     </header>
 
     <div class="mobile-menu" id="mobileMenu">
@@ -983,9 +1440,8 @@
             </p>
             <p>
               From small chips and cracks to full color changes, we handle it
-              all — including custom color matching so refinished tubs and
-              hot tub shells blend seamlessly with the surrounding bathroom
-              or deck.
+              all — including custom color matching so refinished tubs and hot
+              tub shells blend seamlessly with the surrounding bathroom or deck.
             </p>
             <ul class="stub-checklist">
               <li>
@@ -1022,6 +1478,580 @@
           </div>
         </div>
       </section>
+
+      <!-- ===== Why Refinish ===== -->
+      <section class="section section--heron">
+        <div class="container">
+          <div class="section-head section-head--center" data-reveal>
+            <p class="eyebrow">Why Refinish</p>
+            <h2>A Fraction of the Cost, a Fraction of the Time</h2>
+            <p>
+              Replacing a bathtub or hot tub shell means days without a
+              working bathroom, contractors coordinating plumbing, tile, and
+              drywall work around a single fixture, and a bill that often
+              runs into the thousands once demolition and disposal are added
+              in. Refinishing skips nearly all of it. Instead of tearing out
+              the old tub or shell, we strip away the failing surface, repair
+              what's underneath, and rebuild it with a professional-grade
+              coating that looks and performs like new — usually finished in
+              a single visit and ready to use again within a day or two.
+            </p>
+            <p>
+              For homeowners, that means no drywall dust, no re-tiling, and
+              no weeks-long renovation schedule. For landlords and property
+              managers, it means a unit that's back in service fast, without
+              the downtime and expense of a full fixture swap. And because
+              the process works on the tub or shell you already have, your
+              existing plumbing, surround, and tile stay untouched — which
+              keeps both the cost and the mess to a minimum.
+            </p>
+          </div>
+          <div class="why-grid">
+            <div class="why-item" data-reveal>
+              <div class="icon-badge">
+                <svg class="icon" viewBox="0 0 48 48" aria-hidden="true">
+                  <use href="#icon-price"></use>
+                </svg>
+              </div>
+              <div>
+                <h3>Save 60&ndash;80%</h3>
+                <p>
+                  Refinishing typically costs a fraction of a full tub or hot
+                  tub shell replacement, with no demolition, plumbing
+                  changes, or tile work required.
+                </p>
+              </div>
+            </div>
+            <div class="why-item" data-reveal>
+              <div class="icon-badge">
+                <svg class="icon" viewBox="0 0 48 48" aria-hidden="true">
+                  <use href="#icon-calendar"></use>
+                </svg>
+              </div>
+              <div>
+                <h3>Done in a Day</h3>
+                <p>
+                  Most bathtubs are refinished in a single visit. Hot tub
+                  shells depend on size and repair needs, but both finish far
+                  faster than a full replacement install.
+                </p>
+              </div>
+            </div>
+            <div class="why-item" data-reveal>
+              <div class="icon-badge">
+                <svg class="icon" viewBox="0 0 48 48" aria-hidden="true">
+                  <use href="#icon-nomess"></use>
+                </svg>
+              </div>
+              <div>
+                <h3>Less Mess, Less Disruption</h3>
+                <p>
+                  We protect the surrounding floors, walls, and fixtures
+                  before we start, and there's no demolition dust or debris
+                  to clean up afterward.
+                </p>
+              </div>
+            </div>
+            <div class="why-item" data-reveal>
+              <div class="icon-badge">
+                <svg class="icon" viewBox="0 0 48 48" aria-hidden="true">
+                  <use href="#icon-shield"></use>
+                </svg>
+              </div>
+              <div>
+                <h3>Built to Last</h3>
+                <p>
+                  A properly refinished surface holds up to years of daily
+                  use when cared for with non-abrasive cleaners — every job
+                  is backed by a written warranty.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Before & After slider ===== -->
+      <section class="section">
+        <div class="container">
+          <div class="section-head section-head--center" data-reveal>
+            <p class="eyebrow">Before &amp; After</p>
+            <h2>Drag to See the Difference</h2>
+            <p>
+              A tub or hot tub shell that's dull, chipped, or the wrong color
+              doesn't always need to go. Drag the slider to see the kind of
+              transformation a professional refinish can deliver — same tub,
+              same plumbing, same footprint, just a completely different
+              finish.
+            </p>
+          </div>
+          <div class="ba-wrap" data-reveal>
+            <div class="ba-slider" data-ba-slider>
+              <div class="ba-media">
+                <img
+                  class="ba-img-before"
+                  src="https://images.unsplash.com/photo-1724771746691-806010d3c6c7?auto=format&fit=crop&w=1600&q=80"
+                  alt="PLACEHOLDER before photo (stock image) — replace with an actual Diamond Tub Refinishing before photo"
+                />
+                <img
+                  class="ba-img-after"
+                  src="https://images.unsplash.com/photo-1776482128011-c707121f081a?auto=format&fit=crop&w=1600&q=80"
+                  alt="PLACEHOLDER after photo (stock image) — replace with an actual Diamond Tub Refinishing after photo"
+                />
+                <span class="ba-tag ba-tag-before">Before</span>
+                <span class="ba-tag ba-tag-after">After</span>
+                <div class="ba-handle">
+                  <div class="ba-handle-grip">
+                    <svg class="icon" viewBox="0 0 48 48" aria-hidden="true">
+                      <use href="#icon-swap"></use>
+                    </svg>
+                  </div>
+                </div>
+                <input
+                  type="range"
+                  class="ba-range"
+                  min="0"
+                  max="100"
+                  value="50"
+                  aria-label="Drag to compare the before and after refinishing photos"
+                />
+              </div>
+            </div>
+            <p class="ba-caption">
+              Placeholder stock photos shown for layout — swap in real
+              before &amp; after project photos here.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Process ===== -->
+      <section class="section section--heron">
+        <div class="container">
+          <div class="section-head section-head--center" data-reveal>
+            <p class="eyebrow">Our Process</p>
+            <h2>How We Refinish a Tub or Hot Tub Shell</h2>
+            <p>
+              Every bathtub and hot tub shell we refinish goes through the
+              same careful process, whether it's a first-time reglaze or a
+              repeat job on a surface that's been refinished before.
+            </p>
+          </div>
+          <div class="process-list-v">
+            <div class="process-step-v" data-reveal>
+              <span class="process-num-v">1</span>
+              <div>
+                <h3>Protect &amp; Prep the Space</h3>
+                <p>
+                  Before anything else, we mask off the surrounding floors,
+                  walls, vanity, and fixtures with plastic sheeting and tape
+                  so overspray and dust stay contained to the tub or shell
+                  itself. Existing caulking or hardware in the way is removed
+                  at this stage.
+                </p>
+              </div>
+            </div>
+            <div class="process-step-v" data-reveal>
+              <span class="process-num-v">2</span>
+              <div>
+                <h3>Repair Chips, Cracks &amp; Wear</h3>
+                <p>
+                  Chips, hairline cracks, worn jet fittings, and small
+                  structural issues are filled and repaired before any
+                  coating goes on. Skipping this step is the most common
+                  reason a cheap refinish job fails early — repairs need to
+                  be solid and fully cured first.
+                </p>
+              </div>
+            </div>
+            <div class="process-step-v" data-reveal>
+              <span class="process-num-v">3</span>
+              <div>
+                <h3>Strip, Etch &amp; Sand</h3>
+                <p>
+                  The existing surface is stripped of soap scum, oils, and
+                  old coating, then chemically etched and hand-sanded to
+                  create a profile the new coating can bond to. This step
+                  separates a refinish that lasts years from one that peels
+                  within months.
+                </p>
+              </div>
+            </div>
+            <div class="process-step-v" data-reveal>
+              <span class="process-num-v">4</span>
+              <div>
+                <h3>Prime &amp; Spray the Coating</h3>
+                <p>
+                  With the surface prepped and the space fully ventilated, we
+                  spray a bonding primer followed by multiple coats of a
+                  high-solids, high-gloss finish — carefully worked around
+                  jets, drains, and fittings on hot tub shells and jetted
+                  tubs. Custom color matching happens at this stage.
+                </p>
+              </div>
+            </div>
+            <div class="process-step-v" data-reveal>
+              <span class="process-num-v">5</span>
+              <div>
+                <h3>Cure, Reinstall &amp; Walkthrough</h3>
+                <p>
+                  Once the final coat is on, the surface flashes off before
+                  hardware, drains, and caulking are reinstalled. We walk the
+                  finished tub or shell with you and confirm exactly when
+                  it's safe to use — typically 24 to 48 hours later.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== What We Refinish ===== -->
+      <section class="section">
+        <div class="container">
+          <div class="section-head section-head--center" data-reveal>
+            <p class="eyebrow">What We Refinish</p>
+            <h2>Every Tub &amp; Hot Tub Material, Handled Right</h2>
+            <p>
+              Bathtubs and hot tub shells are made from a handful of
+              different materials, and each one needs a slightly different
+              prep and coating approach to hold up long-term.
+            </p>
+          </div>
+          <div class="materials-grid">
+            <div class="material-card" data-reveal>
+              <h3>Porcelain &amp; Cast Iron Tubs</h3>
+              <p>
+                The classic combination — heavy, durable, and prone to
+                chipping and dulling over decades of use. These respond
+                exceptionally well to refinishing.
+              </p>
+            </div>
+            <div class="material-card" data-reveal>
+              <h3>Acrylic &amp; Fiberglass Tubs</h3>
+              <p>
+                Lighter-weight tubs that scratch, yellow, and develop surface
+                crazing over time. We repair cracks and stress fractures
+                before recoating.
+              </p>
+            </div>
+            <div class="material-card" data-reveal>
+              <h3>Hot Tub &amp; Spa Shells</h3>
+              <p>
+                Sun exposure, chemicals, and years of use take a toll on
+                acrylic and fiberglass shells. We refinish around jets,
+                headrests, and fittings without replacing a single
+                component.
+              </p>
+            </div>
+            <div class="material-card" data-reveal>
+              <h3>Cultured Marble Tubs &amp; Surrounds</h3>
+              <p>
+                Prone to cracking, staining, and gel-coat failure. We repair
+                structural cracks first, then refinish to a smooth, glossy
+                result.
+              </p>
+            </div>
+            <div class="material-card" data-reveal>
+              <h3>Jetted &amp; Whirlpool Tubs</h3>
+              <p>
+                The same careful masking and coating work as a standard tub,
+                with extra attention paid to keeping every jet, air line, and
+                fitting free of overspray.
+              </p>
+            </div>
+            <div class="material-card" data-reveal>
+              <h3>Walk-In &amp; Soaker Tubs</h3>
+              <p>
+                From deep soaker tubs to walk-in tubs with built-in seating
+                and doors, we adapt our process to the tub's shape and
+                hardware so nothing gets missed.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Hot Tub & Spa Shells ===== -->
+      <section class="section section--heron">
+        <div class="container stub-grid">
+          <div class="stub-media" data-reveal>
+            <img
+              src="https://images.unsplash.com/photo-1696860741307-72ccbb7826da?auto=format&fit=crop&w=1600&q=80"
+              alt="PLACEHOLDER hot tub photo (stock image) — replace with an actual Diamond Tub Refinishing project photo"
+            />
+          </div>
+          <div class="stub-copy" data-reveal>
+            <p class="eyebrow">Hot Tub &amp; Spa Shells</p>
+            <h2>Hot Tub &amp; Spa Shell Refinishing</h2>
+            <p>
+              Hot tub and swim spa shells take more abuse than almost any
+              other surface in a home — constant exposure to heat, chemicals,
+              sun, and body oils breaks down the gel coat and acrylic finish
+              over years of use, leading to fading, chalky patches, rough
+              spots, and hairline cracks around jets and headrests.
+            </p>
+            <p>
+              Replacing a hot tub shell usually means draining the system,
+              disconnecting the plumbing and equipment pack, and either
+              patching the existing shell yourself or paying for a full new
+              shell and reinstall. Refinishing sidesteps all of that. We work
+              with the shell in place, repairing cracks and worn spots around
+              jets and fittings first, then recoating the entire interior
+              with a durable, UV- and chemical-resistant finish built to
+              handle hot water and spa chemicals long-term.
+            </p>
+            <p>
+              Color changes are common with hot tub refinishing — plenty of
+              owners use it as a chance to update a dated shell color to
+              match a new deck, patio, or landscaping. Whether it's a small
+              crack repair around a jet fitting or a full shell recoat, the
+              same warranty and workmanship apply as our bathtub refinishing.
+            </p>
+            <div class="stub-actions">
+              <a href="/#home" class="btn-primary">
+                <span>Get My Photo Quote</span>
+              </a>
+              <a href="tel:14035107859" class="btn-ghost btn">Call Now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Care & Maintenance ===== -->
+      <section class="section">
+        <div class="container">
+          <div class="section-head section-head--center" data-reveal>
+            <p class="eyebrow">Care &amp; Maintenance</p>
+            <h2>Caring for Your Refinished Surface</h2>
+            <p>
+              A refinished tub or hot tub shell is durable, but it's not
+              indestructible, and how it's cleaned in the first few weeks
+              matters. Here's how to keep the finish looking new for years.
+            </p>
+          </div>
+          <ul class="care-list">
+            <li data-reveal>
+              <strong>Wait before use.</strong> Give the coating the full
+              cure window we recommend — usually 24 to 48 hours — before
+              running water or getting in.
+            </li>
+            <li data-reveal>
+              <strong>Skip abrasive cleaners.</strong> Scouring powders,
+              steel wool, and harsh abrasive pads will dull a refinished
+              surface over time. Stick to non-abrasive liquid cleaners and a
+              soft cloth or sponge.
+            </li>
+            <li data-reveal>
+              <strong>Use bath mats carefully.</strong> Some rubber-backed
+              mats can trap moisture against the surface. A mat without solid
+              rubber backing, or one you lift out and dry after each use, is
+              the safer choice.
+            </li>
+            <li data-reveal>
+              <strong>Avoid dropping heavy or sharp objects.</strong> The
+              coating resists everyday wear well, but a dropped bottle or
+              razor can still chip it, just like it could a factory finish.
+            </li>
+            <li data-reveal>
+              <strong>Keep hot tub chemistry balanced.</strong> For hot tub
+              and spa shells, staying within the recommended pH and
+              sanitizer range protects the coating the same way it protects
+              the equipment.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ===== Testimonials ===== -->
+      <section class="section section--heron">
+        <div class="container">
+          <div class="section-head section-head--center" data-reveal>
+            <p class="eyebrow">Testimonials</p>
+            <h2>What Calgary Homeowners Are Saying</h2>
+          </div>
+          <div class="testimonial-grid">
+            <div class="testimonial-card" data-reveal>
+              <div class="testimonial-stars" aria-hidden="true">
+                &#9733;&#9733;&#9733;&#9733;&#9733;
+              </div>
+              <p class="testimonial-quote">
+                "We have a swim spa that has some hairline cracks in it. Our
+                warranty sent this company out and I'm extremely
+                impressed!!! ...He did so great at matching the color of the
+                tub and everything! He definitely takes pride in his
+                work!!!"
+              </p>
+              <p class="testimonial-name">— Amanda, Calgary</p>
+            </div>
+            <div class="testimonial-card" data-reveal>
+              <div class="testimonial-stars" aria-hidden="true">
+                &#9733;&#9733;&#9733;&#9733;&#9733;
+              </div>
+              <p class="testimonial-quote">
+                "We are extremely happy with the reglazing of our soaker tub
+                and shower. ...very respectful and accommodating! We would
+                recommend his work!!"
+              </p>
+              <p class="testimonial-name">— Sharon, Calgary</p>
+            </div>
+            <div class="testimonial-card" data-reveal>
+              <div class="testimonial-stars" aria-hidden="true">
+                &#9733;&#9733;&#9733;&#9733;&#9733;
+              </div>
+              <p class="testimonial-quote">
+                "Did a great job on my early 70s tub. Looks brand new."
+              </p>
+              <p class="testimonial-name">— Andrew K., Calgary</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== FAQ ===== -->
+      <section class="section">
+        <div class="container">
+          <div class="section-head section-head--center" data-reveal>
+            <p class="eyebrow">FAQ</p>
+            <h2>Bathtub &amp; Hot Tub Refinishing Questions</h2>
+          </div>
+          <div class="faq-list" data-reveal>
+            <div class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false">
+                <span>How long does bathtub refinishing take?</span>
+                <span class="faq-chevron" aria-hidden="true">&#x25BC;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Most bathtub refinishing jobs are completed in a single
+                  visit, typically 3 to 4 hours of hands-on work. Hot tub
+                  shells and tubs with more extensive chip or crack repair
+                  can take longer, since repairs need to fully cure before
+                  the coating goes on.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false">
+                <span>How soon can I use my tub or hot tub after refinishing?</span>
+                <span class="faq-chevron" aria-hidden="true">&#x25BC;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  We recommend waiting 24 to 48 hours before using a freshly
+                  refinished tub or hot tub shell, depending on the coating
+                  and conditions on the day of the job. We'll give you an
+                  exact timeline before we leave.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false">
+                <span>Is there a strong smell during refinishing?</span>
+                <span class="faq-chevron" aria-hidden="true">&#x25BC;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes, there's an odor while the coating is sprayed, similar
+                  to fresh paint. We run extractor fans and ventilate the
+                  space throughout the job to keep it to a minimum, and it
+                  dissipates quickly once the coating flashes off.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false">
+                <span>How long will a refinished tub or hot tub shell last?</span>
+                <span class="faq-chevron" aria-hidden="true">&#x25BC;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  With normal care and non-abrasive cleaning, a
+                  professionally refinished surface typically lasts 10 to
+                  15+ years before it needs attention again — comparable to
+                  the lifespan of the original factory finish.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false">
+                <span>Can you change the color of my tub or hot tub shell?</span>
+                <span class="faq-chevron" aria-hidden="true">&#x25BC;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes. Custom color matching is available whether you're
+                  matching an existing surround or switching to a completely
+                  new color. Let us know what you're going for when you send
+                  photos for your quote.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false">
+                <span>What types of tubs and hot tubs can be refinished?</span>
+                <span class="faq-chevron" aria-hidden="true">&#x25BC;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  We refinish porcelain, cast iron, acrylic, and fiberglass
+                  bathtubs, along with acrylic and fiberglass hot tub and
+                  swim spa shells, jetted and whirlpool tubs, and cultured
+                  marble tubs and surrounds.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false">
+                <span>Do you repair chips and cracks, or just recoat the surface?</span>
+                <span class="faq-chevron" aria-hidden="true">&#x25BC;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Both. Chips, cracks, worn jet fittings, and other damage
+                  are repaired before the coating goes on. Recoating over
+                  unrepaired damage is a shortcut that leads to early
+                  failure, so repair always comes first.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false">
+                <span>Is refinishing covered by a warranty?</span>
+                <span class="faq-chevron" aria-hidden="true">&#x25BC;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes, every bathtub and hot tub refinishing job we complete
+                  is backed by a written warranty. We'll go over the
+                  specific coverage for your project as part of your quote.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Final CTA ===== -->
+      <section class="section final-cta">
+        <div class="container">
+          <div class="final-cta-copy" data-reveal>
+            <h2>Ready to See What Your Tub Could Look Like?</h2>
+            <p>
+              Send a few photos and get a fast, upfront quote — no in-home
+              visit required to get started.
+            </p>
+            <div class="final-cta-actions">
+              <a href="/#home" class="btn-primary">
+                <span>Get My Photo Quote</span>
+              </a>
+              <a href="tel:14035107859" class="btn-ghost btn"
+                >Call (403) 510-7859</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
@@ -1035,8 +2065,8 @@
               <span>Diamond Tub Refinishing</span>
             </a>
             <p>
-              Bathtub, shower &amp; sink refinishing for Calgary homes — a
-              fast photo quote away from looking new again.
+              Bathtub, shower &amp; sink refinishing for Calgary homes — a fast
+              photo quote away from looking new again.
             </p>
           </div>
           <div>
@@ -1059,7 +2089,7 @@
                 <a href="/jetted-tub-conversion/">Jetted Tub Conversion</a>
               </li>
               <li><a href="/ceramic-tile-refinishing/">Ceramic Tile</a></li>
-              <li><a href="/about/">Our Craftsman</a></li>
+              <li><a href="/about/">Our Team</a></li>
               <li><a href="/commercial-services/">Commercial Services</a></li>
               <li>
                 <a href="/tile-supply-installation/"
@@ -1124,7 +2154,9 @@
       });
 
       document
-        .querySelectorAll("#mobileMenu .mobile-link, #mobileMenu a.mobile-header")
+        .querySelectorAll(
+          "#mobileMenu .mobile-link, #mobileMenu a.mobile-header",
+        )
         .forEach(function (link) {
           link.addEventListener("click", closeMobileMenu);
         });
@@ -1158,6 +2190,28 @@
           el.classList.add("is-visible");
         });
       }
+
+      // Before / after comparison sliders
+      document.querySelectorAll("[data-ba-slider]").forEach(function (root) {
+        var range = root.querySelector(".ba-range");
+        var media = root.querySelector(".ba-media");
+        function update() {
+          media.style.setProperty("--reveal", range.value + "%");
+        }
+        range.addEventListener("input", update);
+        update();
+      });
+
+      // FAQ accordion
+      document.querySelectorAll(".faq-question").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var item = btn.closest(".faq-item");
+          var answer = item.querySelector(".faq-answer");
+          var isOpen = item.classList.toggle("open");
+          btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+          answer.style.maxHeight = isOpen ? answer.scrollHeight + "px" : null;
+        });
+      });
     </script>
   </body>
 </html>

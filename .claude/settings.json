@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(python3 -)",
-      "WebSearch"
+      "WebSearch",
+      "WebFetch(domain:unsplash.com)"
     ]
   }
 }
