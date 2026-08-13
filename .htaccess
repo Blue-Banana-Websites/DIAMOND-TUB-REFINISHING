@@ -1,11 +1,13 @@
 # ----------------------------------------------------------------------
-# Canonical host: force non-www (matches sitemap.xml + robots.txt)
+# Canonical host: force diamondtubrefinishing.ca, non-www
+# (matches sitemap.xml + robots.txt). Catches www.ca, .com, www.com,
+# and any other host/alias pointed at this server.
 # ----------------------------------------------------------------------
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
-  RewriteCond %{HTTP_HOST} ^www\.diamondtubrefinishing\.ca$ [NC]
+  RewriteCond %{HTTP_HOST} !^diamondtubrefinishing\.ca$ [NC]
   RewriteRule ^ https://diamondtubrefinishing.ca%{REQUEST_URI} [R=301,L]
 </IfModule>
 

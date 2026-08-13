@@ -784,58 +784,21 @@ a.mobile-header {
   }
 }
 
-/* ---------- Before & after compare grid (static, no slider) ---------- */
-.compare-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-sm);
-  max-width: 780px;
-  margin-inline: auto;
-}
-.compare-card {
-  position: relative;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  aspect-ratio: 4/3;
-  box-shadow: var(--shadow-lift);
-}
-.compare-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.compare-img-before {
-  filter: saturate(0.75) brightness(0.92) sepia(0.12);
-}
-.compare-tag {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  padding: 0.4rem 0.9rem;
-  border-radius: 999px;
-  font-size: 0.74rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  background: rgba(33, 41, 48, 0.68);
-  color: var(--white);
-}
-.compare-caption {
-  text-align: center;
-  color: var(--ink-soft);
-  font-size: var(--fs-small);
-  margin-top: var(--space-sm);
-}
-@media (max-width: 640px) {
-  .compare-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 /* ---------- Before & after slider ---------- */
 .ba-wrap {
   max-width: 780px;
   margin-inline: auto;
+}
+.ba-wrap--full {
+  max-width: none;
+}
+.ba-wrap--full .ba-media {
+  aspect-ratio: 21/9;
+}
+@media (max-width: 640px) {
+  .ba-wrap--full .ba-media {
+    aspect-ratio: 4/3;
+  }
 }
 .ba-media {
   position: relative;
@@ -1226,9 +1189,9 @@ body.is-home {
     aspect-ratio: 16 / 9;
     min-height: 520px;
     padding-top: 130px;
+    padding-bottom: var(--space-lg);
     display: flex;
     align-items: center;
-    overflow: hidden;
     background: var(--ink);
   }
 
@@ -1356,7 +1319,8 @@ body.is-home {
   }
 
   /* ---------- Hero quote form (two-step) ---------- */
-  .quote-card [hidden] {
+  .quote-card [hidden],
+  .quote-modal-dialog [hidden] {
     display: none !important;
   }
 
@@ -1387,6 +1351,7 @@ body.is-home {
 
   .photo-slot {
     position: relative;
+    min-width: 0;
   }
 
   .photo-slot-trigger {
@@ -1544,12 +1509,105 @@ body.is-home {
     .hero {
       aspect-ratio: auto;
       min-height: unset;
-      padding-top: calc(var(--space-lg) + 130px);
+      padding-top: calc((var(--space-lg) + 130px) * 0.56);
       padding-bottom: var(--space-lg);
     }
 
     .hero-inner {
       grid-template-columns: 1fr;
+    }
+  }
+
+  /* ---------- Photo quote modal ---------- */
+  .quote-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-sm);
+    overflow-y: auto;
+  }
+
+  .quote-modal[hidden] {
+    display: none;
+  }
+
+  .quote-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(20, 24, 28, 0.6);
+    backdrop-filter: blur(3px);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+  }
+
+  .quote-modal-dialog {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 560px;
+    max-height: 88vh;
+    overflow-y: auto;
+    margin: auto;
+    background: var(--cream);
+    border-radius: var(--radius-lg);
+    padding: clamp(1.6rem, 1.3rem + 1.5vw, 2.5rem);
+    box-shadow: var(--shadow-lift);
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease;
+  }
+
+  .quote-modal.active .quote-modal-backdrop {
+    opacity: 1;
+  }
+
+  .quote-modal.active .quote-modal-dialog {
+    opacity: 1;
+    transform: none;
+  }
+
+  .quote-modal-close {
+    position: absolute;
+    top: var(--space-2xs);
+    right: var(--space-2xs);
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    background: var(--heron);
+    color: var(--ink);
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  .quote-modal-close:hover,
+  .quote-modal-close:focus-visible {
+    background: var(--teal);
+  }
+
+  .quote-modal-close .icon {
+    width: 16px;
+    height: 16px;
+    stroke-width: 2.6;
+  }
+
+  @media (max-width: 600px) {
+    .quote-modal {
+      padding: 0;
+    }
+
+    .quote-modal-dialog {
+      max-width: none;
+      max-height: 100vh;
+      border-radius: 0;
     }
   }
 
@@ -1930,6 +1988,19 @@ body.is-home {
     border-color: var(--ink);
     background: var(--white);
     outline: none;
+  }
+
+  /* Browser autofill (e.g. Name/Phone/Email) defaults to a light-blue
+     highlight; override via the box-shadow trick since background
+     can't be set directly on autofilled fields. */
+  .field input:-webkit-autofill,
+  .field input:-webkit-autofill:hover,
+  .field input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 1000px #b6f1f0 inset;
+    box-shadow: 0 0 0 1000px #b6f1f0 inset;
+    -webkit-text-fill-color: var(--ink);
+    caret-color: var(--ink);
+    transition: background-color 5000s ease-in-out 0s;
   }
 
   .field textarea {

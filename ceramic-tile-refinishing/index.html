@@ -16,6 +16,19 @@
     href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,600&family=Poppins:wght@400;500;600;700;800&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="/css/styles.css" />
+  <style>
+    .ba-img-before {
+      filter: none;
+    }
+
+    .ba-caption {
+      text-align: center;
+      display: block;
+      margin-inline: auto;
+      max-width: none;
+      width: 100%;
+    }
+  </style>
 </head>
 
 <body>
@@ -219,7 +232,8 @@
     <section class="section">
       <div class="container">
         <div class="stub-media stub-media--full">
-          <img src="/i/ceramic-tile-refinished.webp" alt="Freshly refinished ceramic tile surface with gleaming white fixtures and tiles, glossy and like new" />
+          <img src="/i/ceramic-tiles-refinished.webp"
+            alt="Freshly refinished white ceramic subway tile walls and bathtub surround with glossy like-new finish" />
         </div>
         <div class="stub-copy" data-reveal>
           <p>
@@ -375,12 +389,10 @@
         <div class="ba-wrap" data-reveal>
           <div class="ba-slider" data-ba-slider>
             <div class="ba-media">
-              <img class="ba-img-before"
-                src="https://images.unsplash.com/photo-1629079447777-1e605162dc8d?auto=format&fit=crop&w=1600&q=80"
-                alt="PLACEHOLDER before photo (stock image) — replace with an actual Diamond Tub Refinishing before photo" />
-              <img class="ba-img-after"
-                src="https://images.unsplash.com/photo-1523350165414-082d792c4bcc?auto=format&fit=crop&w=1600&q=80"
-                alt="PLACEHOLDER after photo (stock image) — replace with an actual Diamond Tub Refinishing after photo" />
+              <img class="ba-img-before" src="/i/ba-tile-after.webp"
+                alt="After ceramic tile refinishing — smooth sparkly gloss white tiles with matching white grout lines and teal decor accent" />
+              <img class="ba-img-after" src="/i/ba-tile-before.webp"
+                alt="Before ceramic tile refinishing — dingy grey tiles with dirty grout and small hairline cracks" />
               <span class="ba-tag ba-tag-before">Before</span>
               <span class="ba-tag ba-tag-after">After</span>
               <div class="ba-handle">
@@ -390,20 +402,12 @@
                   </svg>
                 </div>
               </div>
-              <div
-                class="ba-drag-zone"
-                role="slider"
-                aria-valuenow="50"
-                aria-valuemin="0"
-                aria-valuemax="100"
-                aria-label="Drag to compare the before and after refinishing photos"
-                tabindex="0"
-              ></div>
+              <div class="ba-drag-zone" role="slider" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
+                aria-label="Drag to compare the before and after refinishing photos" tabindex="0"></div>
             </div>
           </div>
-          <p class="ba-caption">
-            Placeholder stock photos shown for layout — swap in real before
-            &amp; after project photos here.
+          <p class="ba-caption" style="text-align: center; margin-inline: auto; max-width: none; width: 100%;">
+            Tile refinishing is the simplest, quickest and most-cost-effective solution to old, stained bathroom tiles.
           </p>
         </div>
       </div>
