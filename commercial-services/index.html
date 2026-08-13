@@ -8,7 +8,7 @@
     </title>
     <meta
       name="description"
-      content="Bathtub, shower, sink & tile refinishing for hotels, multi-family buildings, and property managers — scheduled to keep units and rooms in service."
+      content="Exclusive refinishing partner to Calgary home builders, property managers & insurance companies. Bathtub, shower, sink, countertop & tile refinishing scheduled around your units and tenants."
     />
     <link
       rel="canonical"
@@ -24,261 +24,8 @@
       href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,600&family=Poppins:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="/css/styles.css" />
     <style>
-      /* ---------- Reset ---------- */
-      *,
-      *::before,
-      *::after {
-        box-sizing: border-box;
-      }
-      * {
-        margin: 0;
-      }
-      html {
-        -webkit-text-size-adjust: 100%;
-        scroll-behavior: smooth;
-      }
-      img,
-      svg {
-        display: block;
-        max-width: 100%;
-      }
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-      ul {
-        list-style: none;
-        padding: 0;
-      }
-      button,
-      input,
-      select,
-      textarea {
-        font: inherit;
-        color: inherit;
-      }
-      @media (prefers-reduced-motion: reduce) {
-        html {
-          scroll-behavior: auto;
-        }
-        *,
-        *::before,
-        *::after {
-          animation-duration: 0.01ms !important;
-          animation-iteration-count: 1 !important;
-          transition-duration: 0.01ms !important;
-        }
-      }
-
-      /* ---------- Tokens ---------- */
-      :root {
-        --teal: #aae0e0;
-        --teal-soft: #c9ecec;
-        --cream: #f5f6f2;
-        --heron: #f0f1ea;
-        --peach: #f8e4d1;
-        --peach-deep: #e8a765;
-        --ink: #212930;
-        --ink-soft: #57646f;
-        --white: #ffffff;
-
-        --font-display: "Fraunces", ui-serif, Georgia, serif;
-        --font-body: "Poppins", ui-sans-serif, system-ui, sans-serif;
-
-        --fs-h1: clamp(2.3rem, 1.7rem + 2.6vw, 3.6rem);
-        --fs-h2: clamp(1.9rem, 1.5rem + 1.7vw, 3.1rem);
-        --fs-h3: clamp(1.25rem, 1.12rem + 0.55vw, 1.65rem);
-        --fs-lead: clamp(1.1rem, 1.02rem + 0.4vw, 1.35rem);
-        --fs-body: clamp(1rem, 0.95rem + 0.2vw, 1.1rem);
-        --fs-small: clamp(0.82rem, 0.8rem + 0.1vw, 0.92rem);
-        --fs-eyebrow: clamp(0.76rem, 0.74rem + 0.08vw, 0.82rem);
-
-        --space-3xs: clamp(0.4rem, 0.35rem + 0.2vw, 0.6rem);
-        --space-2xs: clamp(0.65rem, 0.55rem + 0.4vw, 0.95rem);
-        --space-xs: clamp(0.9rem, 0.8rem + 0.5vw, 1.3rem);
-        --space-sm: clamp(1.3rem, 1.05rem + 1vw, 1.85rem);
-        --space-md: clamp(1.85rem, 1.4rem + 1.8vw, 2.9rem);
-        --space-lg: clamp(2.6rem, 1.8rem + 3.2vw, 4.75rem);
-        --space-xl: clamp(3.6rem, 2.3rem + 5.2vw, 7.5rem);
-
-        --radius-sm: 10px;
-        --radius-md: 18px;
-        --radius-lg: 30px;
-        --container: min(1240px, 92vw);
-        --shadow-card: 0 1.2rem 3rem -1.4rem rgba(33, 41, 48, 0.35);
-        --shadow-lift: 0 1.6rem 3.5rem -1.2rem rgba(33, 41, 48, 0.4);
-      }
-
-      /* ---------- Base ---------- */
-      body {
-        font-family: var(--font-body);
-        font-size: var(--fs-body);
-        color: var(--ink);
-        background: var(--cream);
-        line-height: 1.6;
-      }
-      h1,
-      h2,
-      h3,
-      h4 {
-        font-family: var(--font-display);
-        color: var(--ink);
-        line-height: 1.08;
-        text-wrap: balance;
-        font-weight: 700;
-      }
-      h1 {
-        font-size: var(--fs-h1);
-        font-weight: 600;
-      }
-      h2 {
-        font-size: var(--fs-h2);
-        font-weight: 600;
-      }
-      h3 {
-        font-size: var(--fs-h3);
-        font-weight: 600;
-      }
-      p {
-        text-wrap: pretty;
-        max-width: 62ch;
-      }
-      em {
-        font-style: italic;
-        font-weight: 500;
-      }
-      ::selection {
-        background: var(--peach);
-        color: var(--ink);
-      }
-      :focus-visible {
-        outline: 2.5px solid var(--ink);
-        outline-offset: 3px;
-        border-radius: 4px;
-      }
-
-      .container {
-        width: var(--container);
-        margin-inline: auto;
-      }
-      .eyebrow {
-        font-family: var(--font-body);
-        font-size: var(--fs-eyebrow);
-        font-weight: 700;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-        color: var(--peach-deep);
-        display: flex;
-        align-items: center;
-        gap: 0.6em;
-        margin-bottom: var(--space-xs);
-      }
-      .eyebrow::before {
-        content: "";
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background: var(--peach-deep);
-        flex: none;
-      }
-      .section {
-        padding-block: var(--space-xl);
-      }
-
-      [data-reveal] {
-        opacity: 0;
-        transform: translateY(18px);
-        transition:
-          opacity 0.7s ease,
-          transform 0.7s ease;
-      }
-      [data-reveal].is-visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      /* ---------- Buttons ---------- */
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.6em;
-        padding: 1rem 1.9rem;
-        border-radius: 999px;
-        font-family: var(--font-body);
-        font-weight: 600;
-        font-size: 0.98rem;
-        letter-spacing: 0.02em;
-        border: none;
-        cursor: pointer;
-        white-space: nowrap;
-      }
-      .btn-ghost {
-        background: transparent;
-        color: var(--ink);
-        border: 1.5px solid rgba(33, 41, 48, 0.3);
-        transition:
-          border-color 0.25s ease,
-          background 0.25s ease;
-      }
-      .btn-ghost:hover {
-        border-color: var(--ink);
-        background: rgba(33, 41, 48, 0.05);
-      }
-
-      .btn-primary {
-        position: relative;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 1.05rem 2.1rem;
-        background: var(--teal);
-        font-family: var(--font-body);
-        font-weight: 700;
-        font-size: 0.92rem;
-        letter-spacing: 0.04em;
-        color: var(--ink);
-        border: 2px solid var(--teal);
-        border-radius: 10px;
-        text-transform: uppercase;
-        white-space: nowrap;
-        box-shadow: 0 0.9rem 1.8rem -1rem rgba(33, 41, 48, 0.28);
-        transition:
-          background 0.25s ease,
-          color 0.25s ease,
-          border-color 0.25s ease,
-          transform 0.25s ease,
-          box-shadow 0.25s ease;
-      }
-      .btn-primary:hover,
-      .btn-primary:focus-visible {
-        background: var(--peach-deep);
-        border-color: var(--peach-deep);
-        color: var(--ink);
-        transform: translateY(-3px);
-        box-shadow: 0 1.2rem 2.2rem -1rem rgba(33, 41, 48, 0.35);
-      }
-      .btn-primary:active {
-        transform: translateY(-1px);
-      }
-      .btn-header {
-        padding: 0.75rem 1.5rem;
-        font-size: 0.82rem;
-      }
-
-      /* ---------- Icon sprite ---------- */
-      .icon {
-        width: 28px;
-        height: 28px;
-        stroke: currentColor;
-        fill: none;
-        stroke-width: 2.2;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        flex: none;
-      }
-
       /* ---------- Header ---------- */
       .site-header {
         position: fixed;
@@ -294,33 +41,38 @@
         width: 100%;
         max-width: 100%;
         margin: 0 auto;
-        background-color: transparent;
-        border: 1px solid transparent;
-        border-radius: 0;
-        box-shadow: none;
-        backdrop-filter: none;
-        -webkit-backdrop-filter: none;
+        height: var(--header-height);
         transition:
           width 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94),
           max-width 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-          background-color 0.35s ease,
-          border-color 0.35s ease,
-          border-radius 0.35s ease,
-          box-shadow 0.35s ease,
-          backdrop-filter 0.35s ease;
+          margin-top 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+          height 0.35s ease;
+      }
+      .nav-pill::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border: 1px solid rgba(33, 41, 48, 0.08);
+        border-top: none;
+        border-radius: 0 0 18px 18px;
+        background-color: rgba(245, 246, 242, 0.92);
+        backdrop-filter: blur(14px) saturate(160%);
+        -webkit-backdrop-filter: blur(14px) saturate(160%);
+        box-shadow:
+          0 8px 32px rgba(33, 41, 48, 0.18),
+          0 2px 8px rgba(33, 41, 48, 0.12);
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        pointer-events: none;
+      }
+      .nav-pill.scrolled::before {
+        opacity: 1;
       }
       .nav-pill.scrolled {
         width: calc(100% - 48px);
         max-width: 1140px;
-        background-color: rgba(245, 246, 242, 0.92);
-        backdrop-filter: blur(14px) saturate(160%);
-        -webkit-backdrop-filter: blur(14px) saturate(160%);
-        border: 1px solid rgba(33, 41, 48, 0.08);
-        border-top: none;
-        border-radius: 0 0 18px 18px;
-        box-shadow:
-          0 8px 32px rgba(33, 41, 48, 0.18),
-          0 2px 8px rgba(33, 41, 48, 0.12);
+        margin-top: -2px;
+        height: calc(var(--header-height) - 14px);
       }
       .header-inner {
         width: 100%;
@@ -329,12 +81,8 @@
         align-items: center;
         justify-content: space-between;
         gap: var(--space-md);
-        padding-block: 0.9rem;
+        height: 100%;
         padding-inline: clamp(20px, 3vw, 44px);
-        transition: padding-block 0.35s ease;
-      }
-      .nav-pill.scrolled .header-inner {
-        padding-block: 0.55rem;
       }
       .brand {
         display: flex;
@@ -344,6 +92,8 @@
         font-weight: 700;
         font-size: clamp(1.05rem, 1rem + 0.4vw, 1.35rem);
         color: var(--ink);
+        position: relative;
+        transition: color 0.35s ease;
       }
       .brand .icon {
         width: 30px;
@@ -352,6 +102,7 @@
       .brand span em {
         color: var(--peach-deep);
         font-style: normal;
+        transition: color 0.35s ease;
       }
 
       /* Desktop nav + mega dropdown */
@@ -574,7 +325,7 @@
       .mobile-actions .btn-primary {
         text-align: center;
       }
-      @media (max-width: 860px) {
+      @media (max-width: 1010px) {
         .nav {
           display: none;
         }
@@ -586,161 +337,166 @@
         }
       }
 
-      /* ---------- Page hero ---------- */
-      .stub-hero {
-        background: linear-gradient(180deg, var(--peach) 0%, var(--cream) 100%);
-        padding-top: calc(var(--space-xl) + 110px);
-        padding-bottom: var(--space-lg);
-        text-align: center;
+      /* ---------- Header colors while over the hero photo ---------- */
+      .nav-pill:not(.scrolled) .brand {
+        color: var(--white);
       }
-      .stub-hero .eyebrow {
-        justify-content: center;
+      .nav-pill:not(.scrolled) .brand span em {
+        color: var(--teal-bright);
       }
-      .stub-hero h1 {
-        max-width: 46rem;
+      .nav-pill.scrolled .brand {
+        color: var(--ink);
+      }
+      .nav-pill.scrolled .brand span em {
+        color: var(--teal-bright);
+      }
+      .nav-pill:not(.scrolled) .nav-link {
+        color: var(--white);
+      }
+      .nav-pill:not(.scrolled) .mobile-toggle .bar {
+        background: var(--white);
+      }
+
+      /* ---------- Page hero (full image background) ---------- */
+      .hero {
+        position: relative;
+        aspect-ratio: 16 / 9;
+        min-height: 520px;
+        padding-top: 65px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        background: var(--ink);
+      }
+      .hero-media {
+        position: absolute;
+        inset: 0;
+      }
+      .hero-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 60%;
+      }
+      .hero-media::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          105deg,
+          rgba(18, 22, 26, 0.92) 0%,
+          rgba(18, 22, 26, 0.8) 30%,
+          rgba(18, 22, 26, 0.68) 50%,
+          rgba(60, 76, 82, 0.4) 72%,
+          rgba(170, 224, 224, 0.1) 100%
+        );
+      }
+      .hero-media::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background: linear-gradient(
+          to bottom,
+          rgba(20, 24, 28, 0.55) 0,
+          rgba(20, 24, 28, 0) 170px
+        );
+      }
+      .hero-inner {
+        position: relative;
+        z-index: 1;
+        width: var(--container);
         margin-inline: auto;
+        display: grid;
+        grid-template-columns: 1.15fr 0.95fr;
+        gap: clamp(2rem, 4vw, 4rem);
+        align-items: center;
+      }
+      .hero-copy .eyebrow {
+        color: var(--peach);
+      }
+      .hero-copy .eyebrow::before {
+        background: var(--peach);
+      }
+      .hero-copy h1 {
+        color: var(--cream);
         margin-bottom: var(--space-sm);
       }
-      .stub-hero-lead {
-        max-width: 42rem;
-        margin-inline: auto;
+      .hero-copy p {
         font-size: var(--fs-lead);
-        color: var(--ink-soft);
+        color: rgba(245, 246, 242, 0.9);
+        max-width: 34rem;
       }
-      .stub-hero-actions {
+      .hero-copy-actions {
         display: flex;
-        justify-content: center;
         flex-wrap: wrap;
         gap: var(--space-2xs);
         margin-top: var(--space-md);
       }
 
-      /* ---------- Page content ---------- */
-      .stub-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: var(--space-lg);
-        align-items: center;
-      }
-      .stub-media {
-        position: relative;
+      /* ---------- Hero quote card ---------- */
+      .quote-card {
+        background: rgba(245, 246, 242, 0.97);
+        backdrop-filter: blur(6px);
         border-radius: var(--radius-lg);
-        overflow: hidden;
-        aspect-ratio: 4/5;
+        padding: clamp(1.6rem, 1.3rem + 1.5vw, 2.5rem);
         box-shadow: var(--shadow-lift);
+        border: 1px solid rgba(255, 255, 255, 0.5);
       }
-      .stub-media img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+      .quote-card .eyebrow {
+        margin-bottom: var(--space-3xs);
       }
-      .stub-copy p {
+      .quote-card h3 {
+        margin-bottom: var(--space-2xs);
+      }
+      .quote-card p {
         color: var(--ink-soft);
-        margin-bottom: var(--space-sm);
+        font-size: 0.98rem;
+        margin-bottom: var(--space-2xs);
       }
-      .stub-checklist {
-        display: flex;
-        flex-direction: column;
-        gap: 0.7rem;
-        margin-bottom: var(--space-md);
-      }
-      .stub-checklist li {
-        display: flex;
-        align-items: flex-start;
-        gap: 0.6rem;
-        font-weight: 600;
+      .quote-card .fine {
         font-size: var(--fs-small);
+        color: var(--ink-soft);
+        opacity: 0.85;
+      }
+      .quote-card .btn-primary {
+        width: 100%;
+        margin-block: var(--space-sm) var(--space-md);
+        font-size: 0.86rem;
+      }
+      .trust-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem 1.2rem;
+      }
+      .trust-row li {
+        display: flex;
+        align-items: center;
+        gap: 0.45rem;
+        font-size: var(--fs-small);
+        font-weight: 600;
         color: var(--ink);
       }
-      .stub-checklist .icon {
-        width: 18px;
-        height: 18px;
+      .trust-row .icon {
+        width: 16px;
+        height: 16px;
         stroke: var(--peach-deep);
         stroke-width: 3;
-        margin-top: 2px;
-        flex: none;
       }
-      .stub-actions {
-        display: flex;
-        flex-wrap: wrap;
-        gap: var(--space-2xs);
-      }
-      @media (max-width: 600px) {
-        .stub-hero-actions,
-        .stub-actions {
-          gap: 2.25rem;
+      @media (max-width: 1100px) {
+        .hero {
+          aspect-ratio: auto;
+          min-height: unset;
+          padding-top: calc((var(--space-lg) + 130px) / 2);
+          padding-bottom: var(--space-lg);
         }
-      }
-      @media (max-width: 900px) {
-        .stub-grid {
+        .hero-inner {
           grid-template-columns: 1fr;
         }
-        .stub-media {
-          order: -1;
-          aspect-ratio: 16/10;
-        }
       }
-
-      /* ---------- Footer ---------- */
-      .site-footer {
-        background: var(--ink);
-        color: var(--heron);
-        padding-block: var(--space-lg) var(--space-md);
-      }
-      .footer-grid {
-        display: grid;
-        grid-template-columns: 1.3fr 0.8fr 1fr;
-        gap: var(--space-lg);
-        margin-bottom: var(--space-lg);
-      }
-      .footer-brand .brand {
-        color: var(--cream);
-      }
-      .footer-brand .brand .icon path:first-child {
-        fill: var(--peach);
-      }
-      .footer-brand p {
-        color: rgba(240, 241, 234, 0.72);
-        margin-top: var(--space-xs);
-        font-size: 0.92rem;
-      }
-      .site-footer h4 {
-        color: var(--cream);
-        font-family: var(--font-body);
-        font-size: 0.85rem;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        margin-bottom: var(--space-sm);
-      }
-      .site-footer ul {
-        display: flex;
-        flex-direction: column;
-        gap: 0.65rem;
-      }
-      .site-footer a,
-      .site-footer li {
-        color: rgba(240, 241, 234, 0.82);
-        font-size: 0.95rem;
-      }
-      .site-footer a:hover {
-        color: var(--peach);
-      }
-      .footer-bottom {
-        border-top: 1px solid rgba(240, 241, 234, 0.15);
-        padding-top: var(--space-sm);
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 0.75rem;
-        font-size: 0.82rem;
-        color: rgba(240, 241, 234, 0.6);
-      }
-      @media (max-width: 780px) {
-        .footer-grid {
-          grid-template-columns: 1fr 1fr;
-        }
-        .footer-brand {
-          grid-column: 1 / -1;
+      @media (max-width: 600px) {
+        .hero-copy-actions {
+          gap: 2.25rem;
         }
       }
     </style>
@@ -826,87 +582,119 @@
         <symbol id="icon-arrow" viewBox="0 0 24 24">
           <path d="M4 12h15M13 5l7 7-7 7" />
         </symbol>
+        <symbol id="icon-building" viewBox="0 0 48 48">
+          <rect x="9" y="7" width="21" height="37" rx="2" />
+          <rect x="30" y="19" width="11" height="25" rx="2" />
+          <line x1="15" y1="15" x2="19" y2="15" />
+          <line x1="21" y1="15" x2="25" y2="15" />
+          <line x1="15" y1="23" x2="19" y2="23" />
+          <line x1="21" y1="23" x2="25" y2="23" />
+          <line x1="15" y1="31" x2="19" y2="31" />
+          <line x1="21" y1="31" x2="25" y2="31" />
+          <line x1="17" y1="44" x2="17" y2="38" />
+          <line x1="23" y1="44" x2="23" y2="38" />
+        </symbol>
+        <symbol id="icon-key" viewBox="0 0 48 48">
+          <circle cx="16" cy="16" r="9" />
+          <path d="M22 22 40 40" />
+          <path d="M32 32 37 27" />
+          <path d="M36 36 41 31" />
+        </symbol>
       </defs>
     </svg>
 
     <header class="site-header" id="site-header">
       <div class="nav-pill" id="navPill">
-      <div class="header-inner">
-        <a href="/" class="brand">
-          <span>Diamond Tub <em>Refinishing</em></span>
-        </a>
-
-        <nav class="nav" id="site-nav">
-          <ul class="nav-menu">
-            <li class="nav-item">
-              <span class="nav-link" tabindex="0"
-                >Refinishing &amp; Repairs
-                <span class="chevron" aria-hidden="true">&#x25BC;</span></span
-              >
-              <div class="nav-dropdown">
-                <div class="nav-dropdown-col">
-                  <div class="nav-dropdown-title">Tubs &amp; Showers</div>
-                  <a href="/bathtub-hot-tub-refinishing/" class="nav-sub-link">
-                    <span class="nav-sub-title">Bathtubs &amp; Hot Tubs</span>
-                    <span class="nav-sub-desc">Chip &amp; stain resurfacing</span>
-                  </a>
-                  <a href="/shower-refinishing/" class="nav-sub-link">
-                    <span class="nav-sub-title">Showers</span>
-                    <span class="nav-sub-desc">Pans, walls &amp; enclosures</span>
-                  </a>
-                </div>
-                <div class="nav-dropdown-col">
-                  <div class="nav-dropdown-title">Sinks &amp; Surfaces</div>
-                  <a href="/sink-vanity-refinishing/" class="nav-sub-link">
-                    <span class="nav-sub-title">Sinks &amp; Vanities</span>
-                    <span class="nav-sub-desc">Bathroom &amp; kitchen</span>
-                  </a>
-                  <a href="/cultured-marble-refinishing/" class="nav-sub-link">
-                    <span class="nav-sub-title">Cultured Marble</span>
-                    <span class="nav-sub-desc">Gel-coat &amp; crack repair</span>
-                  </a>
-                </div>
-                <div class="nav-dropdown-col">
-                  <div class="nav-dropdown-title">Specialty</div>
-                  <a href="/jetted-tub-conversion/" class="nav-sub-link">
-                    <span class="nav-sub-title">Jetted Tub Conversion</span>
-                    <span class="nav-sub-desc">Jet line service &amp; refinish</span>
-                  </a>
-                  <a href="/ceramic-tile-refinishing/" class="nav-sub-link">
-                    <span class="nav-sub-title">Ceramic Tile</span>
-                    <span class="nav-sub-desc">In-place tile reglazing</span>
-                  </a>
-                </div>
-              </div>
-            </li>
-
-            <li class="nav-item">
-              <a href="/commercial-services/" class="nav-link">Commercial</a>
-            </li>
-            <li class="nav-item">
-              <a href="/contact-us/" class="nav-link">Contact</a>
-            </li>
-          </ul>
-        </nav>
-
-        <div class="header-actions">
-          <a href="tel:14035107859" class="btn-primary btn-header">
-            <span>(403) 510-7859</span>
+        <div class="header-inner">
+          <a href="/" class="brand">
+            <span>Diamond Tub <em>Refinishing</em> </span>
           </a>
-          <button
-            type="button"
-            class="mobile-toggle"
-            id="mobileToggle"
-            aria-label="Toggle navigation"
-            aria-expanded="false"
-          >
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </button>
+
+          <nav class="nav" id="site-nav">
+            <ul class="nav-menu">
+              <li class="nav-item">
+                <span class="nav-link" tabindex="0"
+                  >Refinishing &amp; Repairs
+                  <span class="chevron" aria-hidden="true">&#x25BC;</span></span
+                >
+                <div class="nav-dropdown">
+                  <div class="nav-dropdown-col">
+                    <div class="nav-dropdown-title">Tubs &amp; Showers</div>
+                    <a
+                      href="/bathtub-hot-tub-refinishing/"
+                      class="nav-sub-link"
+                    >
+                      <span class="nav-sub-title">Bathtubs &amp; Hot Tubs</span>
+                      <span class="nav-sub-desc"
+                        >Chip &amp; stain resurfacing</span
+                      >
+                    </a>
+                    <a href="/shower-refinishing/" class="nav-sub-link">
+                      <span class="nav-sub-title">Showers</span>
+                      <span class="nav-sub-desc"
+                        >Pans, walls &amp; enclosures</span
+                      >
+                    </a>
+                  </div>
+                  <div class="nav-dropdown-col">
+                    <div class="nav-dropdown-title">Sinks &amp; Surfaces</div>
+                    <a href="/sink-vanity-refinishing/" class="nav-sub-link">
+                      <span class="nav-sub-title">Sinks &amp; Vanities</span>
+                      <span class="nav-sub-desc">Bathroom &amp; kitchen</span>
+                    </a>
+                    <a
+                      href="/cultured-marble-refinishing/"
+                      class="nav-sub-link"
+                    >
+                      <span class="nav-sub-title">Cultured Marble</span>
+                      <span class="nav-sub-desc"
+                        >Gel-coat &amp; crack repair</span
+                      >
+                    </a>
+                  </div>
+                  <div class="nav-dropdown-col">
+                    <div class="nav-dropdown-title">Specialty</div>
+                    <a href="/jetted-tub-conversion/" class="nav-sub-link">
+                      <span class="nav-sub-title">Jetted Tub Conversion</span>
+                      <span class="nav-sub-desc"
+                        >Jet line service &amp; refinish</span
+                      >
+                    </a>
+                    <a href="/ceramic-tile-refinishing/" class="nav-sub-link">
+                      <span class="nav-sub-title">Ceramic Tile</span>
+                      <span class="nav-sub-desc">In-place tile reglazing</span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nav-item">
+                <a href="/commercial-services/" class="nav-link">Commercial</a>
+              </li>
+              <li class="nav-item">
+                <a href="/contact-us/" class="nav-link">Contact</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="header-actions">
+            <a href="tel:14035107859" class="btn-primary btn-header">
+              <span>(403) 510-7859</span>
+            </a>
+            <button
+              type="button"
+              class="mobile-toggle"
+              id="mobileToggle"
+              aria-label="Toggle navigation"
+              aria-expanded="false"
+            >
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </button>
+          </div>
         </div>
       </div>
-    </div>
     </header>
 
     <div class="mobile-menu" id="mobileMenu">
@@ -949,22 +737,56 @@
     </div>
 
     <main>
-      <section class="stub-hero">
-        <div class="container">
-          <p class="eyebrow">Commercial</p>
-          <h1>Commercial Refinishing Services</h1>
-          <p class="stub-hero-lead">
-            Bathtub, shower, sink, and tile refinishing for hotels,
-            multi-family buildings, and property managers — scheduled to
-            keep units and rooms in service.
-          </p>
-          <div class="stub-hero-actions">
-            <a href="/contact-us/" class="btn-primary">
-              <span>Request a Commercial Quote</span>
+      <section class="hero">
+        <div class="hero-media">
+          <img
+            src="https://images.unsplash.com/photo-1758448511487-15f69dd6107b?auto=format&fit=crop&w=1600&q=80"
+            alt="PLACEHOLDER large Calgary condo/apartment building exterior (stock image) — replace with an actual Calgary property photo"
+          />
+        </div>
+        <div class="hero-inner container">
+          <div class="hero-copy">
+            <p class="eyebrow">Commercial</p>
+            <h1>Commercial Refinishing Services</h1>
+            <p>
+              Exclusive refinishing partner to many of Calgary's new home
+              builders, property management companies, and insurance providers
+              &mdash; work scheduled around your units, tenants, and timelines.
+            </p>
+            <div class="hero-copy-actions">
+              <a href="/contact-us/" class="btn-primary">
+                <span>Request a Commercial Quote</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="quote-card">
+            <p class="eyebrow">Get a Fast Photo Quote</p>
+            <h3>Send 1 to 3 photos. We'll send you a straightforward price.</h3>
+            <p class="fine">No site visit required. No obligation.</p>
+            <a href="/#home" class="btn-primary">
+              <span>Get My Photo Quote</span>
             </a>
-            <a href="tel:14035107859" class="btn-ghost btn"
-              >Call (403) 510-7859</a
-            >
+            <ul class="trust-row">
+              <li>
+                <svg class="icon" viewBox="0 0 48 48" aria-hidden="true">
+                  <use href="#icon-check"></use>
+                </svg>
+                Written Warranty
+              </li>
+              <li>
+                <svg class="icon" viewBox="0 0 48 48" aria-hidden="true">
+                  <use href="#icon-check"></use>
+                </svg>
+                Upfront Pricing
+              </li>
+              <li>
+                <svg class="icon" viewBox="0 0 48 48" aria-hidden="true">
+                  <use href="#icon-check"></use>
+                </svg>
+                Calgary Owned
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -973,36 +795,40 @@
         <div class="container stub-grid">
           <div class="stub-media">
             <img
-              src="/i/hero-1920-1080.webp"
-              alt="Freshly refinished bathtub in a commercial property bathroom"
+              src="/i/commercial-refinished-tub.webp"
+              alt="Freshly refinished white bathtub with light teal tile surround in a commercial property bathroom"
             />
           </div>
           <div class="stub-copy" data-reveal>
             <p>
-              Property managers and hotel operations don't have the luxury
-              of a unit sitting empty for days. We work around your schedule
-              — batching units, working after hours or between guest stays,
-              and keeping turnaround times tight so refinishing doesn't turn
-              into a vacancy.
+              Property managers, home builders, and insurance adjusters don't
+              have the luxury of a unit sitting empty for days. Diamond Tub
+              Refinishing is the exclusive refinishing partner for a number of
+              Calgary's new home builders, along with several property
+              management and insurance companies &mdash; we work around your
+              schedule, batching units, working after hours or between guest
+              stays, and keeping turnaround times tight so refinishing doesn't
+              turn into a vacancy.
             </p>
             <p>
               From a single problem unit to a building-wide refresh, we quote
-              transparently up front and stand behind every job with a
-              written warranty — the same standard we hold for residential
-              work.
+              transparently up front with free on-site estimates, and stand
+              behind every job with a written warranty. Every coating we use has
+              stood the test of time for over 25 years in the reglazing
+              industry.
             </p>
             <ul class="stub-checklist">
               <li>
                 <svg class="icon" viewBox="0 0 48 48" aria-hidden="true">
                   <use href="#icon-check"></use>
                 </svg>
-                Hotels, multi-family &amp; property managers
+                Trusted by home builders, property managers &amp; insurers
               </li>
               <li>
                 <svg class="icon" viewBox="0 0 48 48" aria-hidden="true">
                   <use href="#icon-check"></use>
                 </svg>
-                Scheduled around occupancy
+                Scheduled around occupancy &amp; tenants
               </li>
               <li>
                 <svg class="icon" viewBox="0 0 48 48" aria-hidden="true">
@@ -1026,6 +852,501 @@
           </div>
         </div>
       </section>
+
+      <!-- ===== Who We Work With ===== -->
+      <section class="section section--heron">
+        <div class="container">
+          <div class="section-head section-head--center" data-reveal>
+            <p class="eyebrow">Who We Work With</p>
+            <h2>Built Around Your Industry</h2>
+            <p>
+              Commercial refinishing isn't a side job for us &mdash; it's a core
+              part of the business, with long-standing relationships across
+              builders, property managers, and insurers who need consistent,
+              reliable work on a schedule.
+            </p>
+          </div>
+          <div class="why-grid">
+            <div class="why-item" data-reveal>
+              <div class="icon-badge">
+                <svg class="icon" viewBox="0 0 48 48" aria-hidden="true">
+                  <use href="#icon-building"></use>
+                </svg>
+              </div>
+              <div>
+                <h3>Home Builders</h3>
+                <p>
+                  Exclusive refinishing partner for many of Calgary's new home
+                  builders &mdash; handling deficiency repairs and final-finish
+                  touch-ups on tubs, sinks, and countertops ahead of possession
+                  day.
+                </p>
+              </div>
+            </div>
+            <div class="why-item" data-reveal>
+              <div class="icon-badge">
+                <svg class="icon" viewBox="0 0 48 48" aria-hidden="true">
+                  <use href="#icon-key"></use>
+                </svg>
+              </div>
+              <div>
+                <h3>Property Management Companies</h3>
+                <p>
+                  From a single problem unit to a building-wide refresh, we work
+                  with property managers to keep suites turning over fast
+                  between tenants &mdash; without a demolition-scale renovation.
+                </p>
+              </div>
+            </div>
+            <div class="why-item" data-reveal>
+              <div class="icon-badge">
+                <svg class="icon" viewBox="0 0 48 48" aria-hidden="true">
+                  <use href="#icon-shield"></use>
+                </svg>
+              </div>
+              <div>
+                <h3>Insurance Companies</h3>
+                <p>
+                  Called in for chip, crack, and surface-damage claims across
+                  cast iron, porcelain, acrylic, fiberglass, and cultured marble
+                  &mdash; restoring the original fixture instead of a costly
+                  full replacement.
+                </p>
+              </div>
+            </div>
+            <div class="why-item" data-reveal>
+              <div class="icon-badge">
+                <svg class="icon" viewBox="0 0 48 48" aria-hidden="true">
+                  <use href="#icon-pin"></use>
+                </svg>
+              </div>
+              <div>
+                <h3>Hotels &amp; Multi-Family Buildings</h3>
+                <p>
+                  Rooms and rental units scheduled after hours or between guest
+                  stays, batched across multiple units so occupancy stays as
+                  close to normal as possible.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== What We Refinish & Repair ===== -->
+      <section class="section">
+        <div class="container">
+          <div class="section-head section-head--center" data-reveal>
+            <p class="eyebrow">On-Site Services</p>
+            <h2>What We Refinish &amp; Repair On-Site</h2>
+            <p>
+              Our technicians professionally refinish and restore porcelain,
+              arborite, marble, wood, fiberglass, and ceramic surfaces right on
+              your property &mdash; in your choice of colors.
+            </p>
+          </div>
+          <div class="materials-grid">
+            <div class="material-card" data-reveal>
+              <h3>Countertops &amp; Vanities</h3>
+              <p>
+                Arborite, marble, and cultured marble counters refinished in
+                place, without removing cabinetry.
+              </p>
+            </div>
+            <div class="material-card" data-reveal>
+              <h3>Cabinets &amp; Cupboards</h3>
+              <p>
+                Dated or damaged cabinetry refinished to a like-new,
+                factory-smooth finish in your choice of color.
+              </p>
+            </div>
+            <div class="material-card" data-reveal>
+              <h3>Bathtubs &amp; Shower Stalls</h3>
+              <p>
+                Porcelain, cast iron, acrylic, fiberglass &amp; cultured marble
+                tubs and stalls resurfaced on-site to a "like new" finish.
+              </p>
+            </div>
+            <div class="material-card" data-reveal>
+              <h3>Sinks &amp; Appliances</h3>
+              <p>
+                Kitchen and bathroom sinks, along with select appliance
+                surfaces, refinished to match the space around them.
+              </p>
+            </div>
+            <div class="material-card" data-reveal>
+              <h3>Hot Tub Repairs</h3>
+              <p>
+                Fiberglass and cultured marble hot tub shells repaired and
+                refinished without removing the unit.
+              </p>
+            </div>
+            <div class="material-card" data-reveal>
+              <h3>Anti-Slip Treatment</h3>
+              <p>
+                Slip-resistant coatings added to tub and shower floors &mdash; a
+                common ask from property managers and insurers alike.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== New Construction & Renovation Support ===== -->
+      <section class="section section--heron">
+        <div class="container stub-grid">
+          <div class="stub-media" data-reveal>
+            <img
+              src="/i/tile-installation.webp"
+              alt="Tile installation in progress on a Calgary new-construction project"
+            />
+          </div>
+          <div class="stub-copy" data-reveal>
+            <p class="eyebrow">New Construction &amp; Renovation Support</p>
+            <h2>Deficiency Repairs &amp; Multi-Unit Renovations</h2>
+            <p>
+              New builds don't always leave the show suite. A chipped tub,
+              scuffed countertop, or a batch of vanities that didn't survive
+              installation can hold up a possession date &mdash; we're often
+              called in on short notice to fix it fast, in place, without
+              swapping the fixture.
+            </p>
+            <p>
+              We also team with Darrell Reicker, our lead tile installer, on
+              larger renovation projects &mdash; full bathroom rebuilds,
+              backsplashes, and tile work across multiple units for builders and
+              property managers who need one contact for both refinishing and
+              installation.
+            </p>
+            <div class="stub-actions">
+              <a href="/contact-us/" class="btn-primary">
+                <span>Request a Commercial Quote</span>
+              </a>
+              <a href="tel:14035107859" class="btn-ghost btn">Call Now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Built for Commercial Timelines ===== -->
+      <section class="section">
+        <div class="container">
+          <div class="section-head section-head--center" data-reveal>
+            <p class="eyebrow">Why Commercial Clients Choose Us</p>
+            <h2>Built for Commercial Timelines</h2>
+          </div>
+          <div class="why-grid">
+            <div class="why-item" data-reveal>
+              <div class="icon-badge">
+                <svg class="icon" viewBox="0 0 48 48" aria-hidden="true">
+                  <use href="#icon-price"></use>
+                </svg>
+              </div>
+              <div>
+                <h3>Save 60&ndash;80%</h3>
+                <p>
+                  Refinishing costs a fraction of a full fixture or surface
+                  replacement, with no demolition or contractor coordination
+                  required.
+                </p>
+              </div>
+            </div>
+            <div class="why-item" data-reveal>
+              <div class="icon-badge">
+                <svg class="icon" viewBox="0 0 48 48" aria-hidden="true">
+                  <use href="#icon-calendar"></use>
+                </svg>
+              </div>
+              <div>
+                <h3>Scheduled Around Occupancy</h3>
+                <p>
+                  After-hours, between tenants, or batched across multiple units
+                  so rooms and suites stay in service.
+                </p>
+              </div>
+            </div>
+            <div class="why-item" data-reveal>
+              <div class="icon-badge">
+                <svg class="icon" viewBox="0 0 48 48" aria-hidden="true">
+                  <use href="#icon-nomess"></use>
+                </svg>
+              </div>
+              <div>
+                <h3>On-the-Spot Repairs</h3>
+                <p>
+                  Chips, cracks, burns, and stains repaired on-site in a single
+                  visit &mdash; no need to remove and replace the fixture.
+                </p>
+              </div>
+            </div>
+            <div class="why-item" data-reveal>
+              <div class="icon-badge">
+                <svg class="icon" viewBox="0 0 48 48" aria-hidden="true">
+                  <use href="#icon-shield"></use>
+                </svg>
+              </div>
+              <div>
+                <h3>25+ Years Proven</h3>
+                <p>
+                  Coatings and processes tested for over 25 years in the
+                  reglazing industry, backed by a written warranty on every job.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Process ===== -->
+      <section class="section section--heron">
+        <div class="container">
+          <div class="section-head section-head--center" data-reveal>
+            <p class="eyebrow">Our Process</p>
+            <h2>How a Commercial Project Runs</h2>
+            <p>
+              Whether it's one unit or twenty, every commercial job follows the
+              same reliable process &mdash; scoped up front and delivered on
+              schedule.
+            </p>
+          </div>
+          <div class="process-list-v">
+            <div class="process-step-v" data-reveal>
+              <span class="process-num-v">1</span>
+              <div>
+                <h3>Free On-Site Estimate</h3>
+                <p>
+                  A technician walks the units or property with you and provides
+                  a no-obligation quote, scoped to exactly what needs repair or
+                  refinishing.
+                </p>
+              </div>
+            </div>
+            <div class="process-step-v" data-reveal>
+              <span class="process-num-v">2</span>
+              <div>
+                <h3>Scheduling That Works Around You</h3>
+                <p>
+                  We batch multiple units into one visit or coordinate around
+                  guest stays, tenant turnover, or a builder's possession date.
+                </p>
+              </div>
+            </div>
+            <div class="process-step-v" data-reveal>
+              <span class="process-num-v">3</span>
+              <div>
+                <h3>Protect &amp; Prep Each Space</h3>
+                <p>
+                  The same masking and surface prep as any residential job, done
+                  unit by unit so surrounding floors, walls, and fixtures stay
+                  clean.
+                </p>
+              </div>
+            </div>
+            <div class="process-step-v" data-reveal>
+              <span class="process-num-v">4</span>
+              <div>
+                <h3>Repair, Strip &amp; Refinish</h3>
+                <p>
+                  Chips, cracks, and wear are repaired first, then the surface
+                  is stripped, etched, and rebuilt with a durable, high-gloss
+                  coating.
+                </p>
+              </div>
+            </div>
+            <div class="process-step-v" data-reveal>
+              <span class="process-num-v">5</span>
+              <div>
+                <h3>Walkthrough &amp; Sign-Off</h3>
+                <p>
+                  Each unit is reviewed and confirmed ready before we move to
+                  the next, so nothing gets missed on a multi-unit job.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Testimonials ===== -->
+      <section class="section">
+        <div class="container">
+          <div class="section-head section-head--center" data-reveal>
+            <p class="eyebrow">Testimonials</p>
+            <h2>What Our Clients Say</h2>
+          </div>
+          <div class="testimonial-grid">
+            <div class="testimonial-card" data-reveal>
+              <div class="testimonial-stars" aria-hidden="true">
+                &#9733;&#9733;&#9733;&#9733;&#9733;
+              </div>
+              <p class="testimonial-quote">
+                "We have a swim spa that has some hairline cracks in it. Our
+                warranty sent this company out and I'm extremely impressed!!!
+                Henry did an absolutely fantastic job&hellip; He did so great at
+                matching the color of the tub and everything! He definitely
+                takes pride in his work!!!"
+              </p>
+              <p class="testimonial-name">— Amanda, Calgary</p>
+            </div>
+            <div class="testimonial-card" data-reveal>
+              <div class="testimonial-stars" aria-hidden="true">
+                &#9733;&#9733;&#9733;&#9733;&#9733;
+              </div>
+              <p class="testimonial-quote">
+                "Very impressive. We had our marble sink &amp; counter top
+                repaired and refinished, and our tub refinished&hellip; the
+                price was reasonable (exactly as quoted), the guys were
+                professional, and the end result is top notch!"
+              </p>
+              <p class="testimonial-name">— Mike M.</p>
+            </div>
+            <div class="testimonial-card" data-reveal>
+              <div class="testimonial-stars" aria-hidden="true">
+                &#9733;&#9733;&#9733;&#9733;&#9733;
+              </div>
+              <p class="testimonial-quote">
+                "5 star performance! Impressive finished product and very
+                reasonable price. Certainly wouldn't think twice about using
+                them again or referring their work to someone else."
+              </p>
+              <p class="testimonial-name">— Elizabeth C.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== FAQ ===== -->
+      <section class="section section--heron">
+        <div class="container">
+          <div class="section-head section-head--center" data-reveal>
+            <p class="eyebrow">FAQ</p>
+            <h2>Commercial Refinishing Questions</h2>
+          </div>
+          <div class="faq-list" data-reveal>
+            <div class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false">
+                <span>Do you work directly with home builders?</span>
+                <span class="faq-chevron" aria-hidden="true">&#x25BC;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes. We're the exclusive refinishing partner for a number of
+                  Calgary's new home builders, handling deficiency repairs and
+                  pre-possession touch-ups on tubs, sinks, and countertops.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false">
+                <span
+                  >Is the warranty different for commercial or rental
+                  properties?</span
+                >
+                <span class="faq-chevron" aria-hidden="true">&#x25BC;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes. Commercial and rental properties are backed by a 1-year
+                  written warranty, compared to 3 years on owner-occupied
+                  residential jobs.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false">
+                <span>Can you batch multiple units into one visit?</span>
+                <span class="faq-chevron" aria-hidden="true">&#x25BC;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes. Batch pricing is available for property managers and
+                  builders with several units to refinish, and we can schedule
+                  the whole batch around your building's occupancy.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false">
+                <span>Do you offer anti-slip treatment?</span>
+                <span class="faq-chevron" aria-hidden="true">&#x25BC;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes, anti-slip treatment can be added to tub and shower floors
+                  during refinishing &mdash; a common request from property
+                  managers and insurers looking to reduce liability.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false">
+                <span>Do you offer discounts for commercial clients?</span>
+                <span class="faq-chevron" aria-hidden="true">&#x25BC;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes, we offer a discount for commercial clients as well as
+                  senior citizens. Ask about current rates when you request your
+                  quote.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false">
+                <span>How do insurance claim jobs typically work?</span>
+                <span class="faq-chevron" aria-hidden="true">&#x25BC;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  We're often called in directly by adjusters or property
+                  managers to assess and quote chip, crack, or surface-damage
+                  claims. In most cases the original fixture can be restored
+                  on-site, which is faster and less costly than a full
+                  replacement.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false">
+                <span
+                  >Do tenants or guests need to vacate during the work?</span
+                >
+                <span class="faq-chevron" aria-hidden="true">&#x25BC;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  No, though the unit itself is out of use for a few hours while
+                  we work. There's an odor while the coating is sprayed, similar
+                  to fresh paint &mdash; we run extractor fans throughout the
+                  job, and the unit is typically ready to use again the next
+                  day.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Final CTA ===== -->
+      <section class="section final-cta">
+        <div class="container">
+          <div class="final-cta-copy" data-reveal>
+            <h2>Ready to Schedule a Commercial Job?</h2>
+            <p>
+              Whether it's one unit or a building-wide refresh, send us the
+              details and we'll get back to you with a straightforward quote.
+            </p>
+            <div class="final-cta-actions">
+              <a href="/contact-us/" class="btn-primary">
+                <span>Request a Commercial Quote</span>
+              </a>
+              <a href="tel:14035107859" class="btn-ghost btn"
+                >Call (403) 510-7859</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
@@ -1039,8 +1360,8 @@
               <span>Diamond Tub Refinishing</span>
             </a>
             <p>
-              Bathtub, shower &amp; sink refinishing for Calgary homes — a
-              fast photo quote away from looking new again.
+              Bathtub, shower &amp; sink refinishing for Calgary homes — a fast
+              photo quote away from looking new again.
             </p>
           </div>
           <div>
@@ -1049,7 +1370,7 @@
               <li><a href="/">Home</a></li>
               <li>
                 <a href="/bathtub-hot-tub-refinishing/"
-                  >Bathtubs &amp; Hot Tubs</a
+                  >Bathtubs, Jacuzzis &amp; Hot Tubs</a
                 >
               </li>
               <li>
@@ -1058,18 +1379,44 @@
               <li>
                 <a href="/sink-vanity-refinishing/">Sinks &amp; Vanities</a>
               </li>
-              <li><a href="/shower-refinishing/">Showers</a></li>
               <li>
-                <a href="/jetted-tub-conversion/">Jetted Tub Conversion</a>
+                <a href="/shower-refinishing/">Showers &amp; Shower Pans</a>
               </li>
-              <li><a href="/ceramic-tile-refinishing/">Ceramic Tile</a></li>
-              <li><a href="/about/">Our Team</a></li>
-              <li><a href="/commercial-services/">Commercial Services</a></li>
               <li>
-                <a href="/tile-supply-installation/"
-                  >Tile Supply &amp; Installation</a
+                <a href="/jetted-tub-conversion/">Jetted Tub Conversions</a>
+              </li>
+              <li>
+                <a href="/ceramic-tile-refinishing/"
+                  >Ceramic Tile Refinishing</a
                 >
               </li>
+              <li
+                class="footer-divider"
+                role="separator"
+                aria-hidden="true"
+              ></li>
+              <li>
+                <a href="/tile-supply-installation/"
+                  >Tile Supply & Installation</a
+                >
+              </li>
+              <li
+                class="footer-divider"
+                role="separator"
+                aria-hidden="true"
+              ></li>
+              <li><a href="/commercial-services/">Commercial Services</a></li>
+              <li
+                class="footer-divider"
+                role="separator"
+                aria-hidden="true"
+              ></li>
+              <li><a href="/about/">Our Team</a></li>
+              <li
+                class="footer-divider"
+                role="separator"
+                aria-hidden="true"
+              ></li>
               <li><a href="/contact-us/">Contact</a></li>
             </ul>
           </div>
@@ -1128,7 +1475,9 @@
       });
 
       document
-        .querySelectorAll("#mobileMenu .mobile-link, #mobileMenu a.mobile-header")
+        .querySelectorAll(
+          "#mobileMenu .mobile-link, #mobileMenu a.mobile-header",
+        )
         .forEach(function (link) {
           link.addEventListener("click", closeMobileMenu);
         });
@@ -1162,6 +1511,17 @@
           el.classList.add("is-visible");
         });
       }
+
+      // FAQ accordion
+      document.querySelectorAll(".faq-question").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var item = btn.closest(".faq-item");
+          var answer = item.querySelector(".faq-answer");
+          var isOpen = item.classList.toggle("open");
+          btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+          answer.style.maxHeight = isOpen ? answer.scrollHeight + "px" : null;
+        });
+      });
     </script>
   </body>
 </html>

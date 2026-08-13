@@ -3,7 +3,19 @@
     "allow": [
       "Bash(python3 -)",
       "WebSearch",
-      "WebFetch(domain:unsplash.com)"
+      "WebFetch(domain:unsplash.com)",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless=new --disable-gpu --screenshot=\"/private/tmp/claude-501/-Users-bluebanana-Documents-Blue-Banana-Files-Diamond-Tub-Refinishing-DIAMOND-TUB-REFINISHING/f65fde0a-c796-40b2-ad09-14808ad121f2/scratchpad/jetted-bottom.png\" --window-size=1400,10500 --virtual-time-budget=6000 \"http://localhost:8934/jetted-tub-conversion/\")",
+      "Bash(pkill -f \"http.server 8934\")",
+      "Bash(pkill -f \"http.server 8935\")",
+      "Bash(python3 -c ' *)",
+      "Bash(open \"/Users/bluebanana/Documents/Blue Banana Files/Diamond Tub Refinishing/DIAMOND TUB REFINISHING/commercial-services/index.html\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"https://images.unsplash.com/photo-1724771746691-806010d3c6c7?auto=format&fit=crop&w=1600&q=80\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"https://images.unsplash.com/photo-1696860741307-72ccbb7826da?auto=format&fit=crop&w=1600&q=80\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"https://images.unsplash.com/photo-1758448511487-15f69dd6107b?auto=format&fit=crop&w=1600&q=80\")",
+      "Bash(defaults read *)",
+      "Bash(echo \"exit:$?\")",
+      "Read(//private/tmp/dtr_css/**)",
+      "Bash(python3)"
     ]
   }
 }
